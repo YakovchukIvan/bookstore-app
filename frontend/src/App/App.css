@@ -1,0 +1,151 @@
+.App {
+  text-align: center;
+}
+
+a {
+  color: rgb(103, 162, 182);
+  font-size: 35px;
+  text-decoration: none;
+}
+
+nav {
+  background-color: #9897da50;
+  padding: 5px;
+}
+
+nav a {
+  margin-left: 20px;
+}
+
+nav a:hover {
+  color: rgb(34, 60, 68);
+}
+
+/* Працює по дефолу клас active при додаванні NavLink, лише потрібно додати стилі */
+.active {
+  color: lightyellow;
+  text-decoration: none;
+}
+
+.active:hover {
+  color: lightyellow;
+  text-decoration: none;
+}
+
+/* Якщо створювати active стрілковою функцією */
+/* .activeLink {
+  color: lightyellow;
+  text-decoration: none;
+}
+
+.activeLink:hover {
+  color: lightyellow;
+  text-decoration: none;
+} */
+
+h1 {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+button {
+  background-color: #6f6dec;
+  color: white;
+  font-size: 22px;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 8px 16px;
+  margin: 10px;
+}
+
+button:active {
+  opacity: 0.8;
+}
+
+.block__list-course {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.courseLink {
+  background-color: #aa89cf41;
+  border: 2px solid #aa89cf;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 600px;
+  font-size: 25px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.767);
+  padding: 12px;
+}
+
+.courseLink > img {
+  max-width: 300px;
+  width: 100%;
+}
+
+.courseLink > p {
+  border: 2px solid #aa89cf;
+  border-radius: 10px;
+  /* text-align: right; */
+}
+
+.courseLink > p > span {
+  text-align: left !important;
+}
+
+.courseLink > span:hover {
+  background-color: rgba(111, 109, 236, 0.267);
+}
+
+.not__found {
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+.courses__subtitle {
+  color: #6f6dec;
+}
+
+.list__sort {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style-type: none;
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.list__sort > li {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 2px 8px 4px 8px;
+}
+
+.list__sort > li:first-child {
+  border: none;
+  padding: none;
+}
+
+.list__sort > li:hover {
+  background-color: #6f6dec;
+  color: wheat;
+  cursor: pointer;
+}
+
+.list__sort > li:hover:first-child {
+  background: none !important;
+  color: white;
+  cursor: default;
+}
+
+.item-sort-active {
+  background-color: #6f6dec;
+  border: 1px solid #6f6dec !important;
+}
