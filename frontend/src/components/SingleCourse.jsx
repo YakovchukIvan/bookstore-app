@@ -1,21 +1,21 @@
 import { useEffect } from 'react';
-import courses from '../data/courses';
+import books from '../data/courses';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-// import NotFound from './NotFound';
 
 function SingleCourse() {
   const params = useParams();
   const navigate = useNavigate();
 
-  const course = courses.find((course) => {
-    return course.slug === params.slug;
+  console.log('courses:', books);
+  const book = books.find((books) => {
+    return books.slug === params.slug;
   });
 
   useEffect(() => {
-    if (!course) {
+    if (!book) {
       navigate('..', { relative: 'path' });
     }
-  }, [course, navigate]);
+  }, [book, navigate]);
 
   // Simply show NotFOund component
   //   if (!course) {
@@ -24,15 +24,15 @@ function SingleCourse() {
 
   return (
     <>
-      <h1>Title: {course.title}</h1>
-      <h2>Caption: {course?.caption}</h2>
-      <h3>Type: {course?.slug}</h3>
-      <h4>ID: {course?.id}</h4>
+      <h1>Title: {book.title}</h1>
+      <h2>Caption: {book?.caption}</h2>
+      <h3>Type: {book?.slug}</h3>
+      <h4>ID: {book?.idBook}</h4>
       <br />
       <hr />
-      <Link to=".." relative="path">
-        All courses
-      </Link>
+      {/* <Link to=".." relative="path">
+        All books
+      </Link> */}
     </>
   );
 }

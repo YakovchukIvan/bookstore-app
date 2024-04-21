@@ -1,0 +1,66 @@
+.wrapperBook {
+  // border: 1px solid #000;
+  max-width: 1280px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% 75%; /* Лівий блок - 30%, правий блок - 70% */
+  gap: 10px; /* Проміжок між блоками */
+  // margin: 0 auto;
+  // padding: 10px;
+
+  .bookMain {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    gap: 15px 10px; /* Відступ між карточками */
+    justify-content: flex-start; /* Змінюємо властивість justify-content */
+    // border: 1px solid yellow;
+    margin-right: 5px;
+
+    .blockListBook {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      background-color: #aa89cf41;
+      border: 2px solid #aa89cf;
+      border-radius: 6px;
+      color: rgba(255, 255, 255, 0.767);
+      padding: 10px;
+
+      .bookLink {
+        width: 100%;
+        text-align: left;
+        white-space: nowrap; /* Запобігає переносу тексту */
+        overflow: hidden; /* Приховує будь-який вміст, який виходить за межі блоку */
+        text-overflow: ellipsis; /* Додає "..." в кінці тексту, який виходить за межі блоку */
+        font-size: clamp(0.75rem, 0.568rem + 0.91vw, 1.25rem);
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.705);
+
+        &:hover {
+          color: white;
+        }
+
+        img {
+          width: 100%;
+          height: 250px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+
+.filterBook {
+  border: 2px solid blue;
+}
+
+@media (max-width: 1000px) {
+  .wrapperBook {
+    .bookMain {
+      // border: 1px solid red;
+      grid-template-columns: repeat(3, minmax(125px, 1fr));
+      gap: 15px 10px; /* Відступ між карточками */
+    }
+  }
+}

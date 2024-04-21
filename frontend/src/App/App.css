@@ -1,4 +1,5 @@
 .App {
+  /* max-width: 1280px; */
   text-align: center;
 }
 
@@ -8,9 +9,10 @@ a {
   text-decoration: none;
 }
 
-nav {
+header,
+footer {
   background-color: #9897da50;
-  padding: 5px;
+  padding: 15px;
 }
 
 nav a {
@@ -62,45 +64,6 @@ button {
 
 button:active {
   opacity: 0.8;
-}
-
-.block__list-course {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-
-.courseLink {
-  background-color: #aa89cf41;
-  border: 2px solid #aa89cf;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  width: 600px;
-  font-size: 25px;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.767);
-  padding: 12px;
-}
-
-.courseLink > img {
-  max-width: 300px;
-  width: 100%;
-}
-
-.courseLink > p {
-  border: 2px solid #aa89cf;
-  border-radius: 10px;
-  /* text-align: right; */
-}
-
-.courseLink > p > span {
-  text-align: left !important;
-}
-
-.courseLink > span:hover {
-  background-color: rgba(111, 109, 236, 0.267);
 }
 
 .not__found {

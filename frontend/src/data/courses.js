@@ -1,14 +1,15 @@
 const books = [
   {
     idBook: 1,
-    title: 'Убити пересмішника',
+    title: 'Вбити пересмішника',
     author: 'Гарпер Лі',
     caption:
       'Роман, що розгортається в Американському Півдні під час 1930-х років.',
     year: 1960,
-    imgSrc: '/public/img/book/1.jpg',
+    imgSrc: '/img/book/1.jpg',
     isFavorite: false,
     genre: 'Художня література',
+    slug: 'vbyty-peresmishnyka',
   },
   {
     idBook: 2,
@@ -16,20 +17,21 @@ const books = [
     author: 'Джордж Орвелл',
     caption: 'Дистопійний роман, який відбувається в тоталітарному режимі.',
     year: 1949,
-    imgSrc: '/public/img/book/2.jpg',
+    imgSrc: '/img/book/2.jpg',
     isFavorite: true,
     genre: 'Наукова фантастика',
+    slug: '1984',
   },
-  // Додайте інші книги за вашим смаком
   {
     idBook: 3,
     title: 'Гаррі Поттер і філософський камінь',
     author: 'Джоан Роулінг',
     caption: 'Фентезі-роман про пригоди молодого чарівника Гаррі Поттера.',
     year: 1997,
-    imgSrc: '/public/img/book/3.jpg',
+    imgSrc: '/img/book/3.jpg',
     isFavorite: true,
     genre: 'Фентезі',
+    slug: 'garri-potter-i-filosofskyy-kamin',
   },
   {
     idBook: 4,
@@ -37,9 +39,10 @@ const books = [
     author: 'Річард Бах',
     caption: 'Філософський роман про шлях до духовного просвітлення.',
     year: 1977,
-    imgSrc: '/public/img/book/4.jpg',
+    imgSrc: '/img/book/4.jpg',
     isFavorite: false,
     genre: 'Філософія',
+    slug: 'ilyuziyi',
   },
   {
     idBook: 5,
@@ -47,9 +50,10 @@ const books = [
     author: 'Антуан де Сент-Екзюпері',
     caption: 'Філософська казка про дорослішання і любов.',
     year: 1943,
-    imgSrc: '/public/img/book/5.jpg',
+    imgSrc: '/img/book/5.jpg',
     isFavorite: true,
     genre: 'Філософія',
+    slug: 'malenkiy-prync',
   },
   {
     idBook: 6,
@@ -57,9 +61,10 @@ const books = [
     author: 'Лев Толстой',
     caption: 'Епічний роман про Наполеонівські війни та російське суспільство.',
     year: 1869,
-    imgSrc: '/public/img/book/6.jpg',
+    imgSrc: '/img/book/6.jpg',
     isFavorite: false,
     genre: 'Історична проза',
+    slug: 'viyna-i-mir',
   },
   {
     idBook: 7,
@@ -67,9 +72,10 @@ const books = [
     author: 'Сьюзен Коллінз',
     caption: 'Дистопійний роман про жорстокі боротьби за виживання.',
     year: 2008,
-    imgSrc: '/public/img/book/7.jpg',
+    imgSrc: '/img/book/7.jpg',
     isFavorite: true,
     genre: 'Наукова фантастика',
+    slug: 'holodni-igry',
   },
   {
     idBook: 8,
@@ -77,9 +83,10 @@ const books = [
     author: 'Джордж Мартін',
     caption: 'Фентезі-епопея про боротьбу за трон у країні Вестерос.',
     year: 1996,
-    imgSrc: '/public/img/book/8.jpg',
+    imgSrc: '/img/book/8.jpg',
     isFavorite: true,
     genre: 'Фентезі',
+    slug: 'hra-prestoliv-vohon-i-krov',
   },
   {
     idBook: 9,
@@ -88,9 +95,10 @@ const books = [
     caption:
       'Роман, що розповідає про події революції і громадянської війни в Україні 1917-1921 років через призму долі головного героя - Івана Онуфріячука.',
     year: 1966,
-    imgSrc: '/public/img/book/9.jpg',
+    imgSrc: '/img/book/9.jpg',
     isFavorite: false,
     genre: 'Історична проза',
+    slug: 'dzherkalo-dlya-geroya',
   },
   {
     idBook: 10,
@@ -99,9 +107,10 @@ const books = [
     caption:
       'Епічний фентезі-роман, що розповідає про неймовірні пригоди молодого Квоута, який стає вбивцею короля і відкриває для себе справжню силу слова.',
     year: 2007,
-    imgSrc: '/public/img/book/10.jpg',
+    imgSrc: '/img/book/10.jpg',
     isFavorite: true,
     genre: 'Фентезі',
+    slug: 'kvout-vbyvtsya-korolya',
   },
 ];
 

@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 function Menu() {
   return (
-    <div>
+    <header>
       <nav>
         <NavLink
           // Варіант додавання класу з стрілковою функціює Active(підсвічування вибраного link) className={({ isActive }) => (isActive ? 'activeLink' : 'link')}
@@ -22,7 +22,7 @@ function Menu() {
         <NavLink to="/about">Про нас</NavLink>
         <NavLink to="/contacts">Контакти</NavLink>
       </nav>
-    </div>
+    </header>
   );
 }
 
