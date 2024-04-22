@@ -4,8 +4,8 @@ import MainLayouts from '../layouts/MainLayouts';
 
 import Home from '../pages/Home';
 import BookStore from '../pages/MainBookStore/BookStore';
-import SingleCourse from '../components/SingleCourse';
-import About from '../components/About';
+import SingleCourse from '../pages/SingleBook/SingleBook';
+import About from '../pages/About';
 import Contacts from '../pages/Contacts';
 import NotFound from '../pages/NotFound';
 

@@ -1,0 +1,21 @@
+.cardBook {
+  max-width: 800px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 45% 55%; /* Лівий блок - 30%, правий блок - 70% */
+  justify-content: space-between;
+  gap: 20px; /* Проміжок між блоками */
+
+  .bookImage {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .bookCaption {
+    overflow: hidden;
+    max-width: 100%;
+  }
+}

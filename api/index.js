@@ -12,8 +12,9 @@ function getRandomBook() {
   return randomBook;
 }
 
-app.get('/random-book', (req, res) => {
-  res.json(getRandomBook());
+app.get('/books', (req, res) => {
+  // res.json(getRandomBook());
+  res.json(booksData);
 });
 
 app.get('/random-book-delayed', (req, res) => {

@@ -1,4 +1,4 @@
-import styles from './Book.module.scss';
+import styles from './MainBook.module.scss';
 
 function FilterBookStore() {
   return <div className={styles.filterBook}>FilterBookStore</div>;

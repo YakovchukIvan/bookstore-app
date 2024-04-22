@@ -1,17 +1,30 @@
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-import books from '../../data/courses';
+// import books from '../../data/books';
 
-import styles from './Book.module.scss';
+import styles from './MainBook.module.scss';
 import FilterBookStore from './FilterBookStore';
+import { selectBooks } from '../../redux/bookSlices';
 
 function BookStore() {
+  const books = useSelector(selectBooks);
+
   return (
     <div className={styles.wrapperBook}>
       <FilterBookStore />
 
       <div>
-        <p className={styles.titleBookStore}>Книгі</p>
+        <div className={styles.titleBookStore}>
+          <div className={styles.amountBook}>
+            <span>
+              Всього книг: <strong>{books.length}</strong>
+            </span>
+          </div>
+          <div className={styles.sorting}>
+            <span>Сортування</span>
+          </div>
+        </div>
 
         <div className={styles.bookMain}>
           {books.map((book) => (
