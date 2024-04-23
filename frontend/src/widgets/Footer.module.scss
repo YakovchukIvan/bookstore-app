@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+
+  .caption {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+
+    ul {
+      list-style-type: none;
+
+      li:nth-child(1) {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      li:nth-child(2) {
+        font-size: 16px;
+      }
+      li:nth-child(3) {
+        font-size: 16px;
+      }
+    }
+  }
+  .protect {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+}

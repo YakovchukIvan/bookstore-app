@@ -20,7 +20,7 @@
     max-width: 100%;
     display: grid;
     grid-template-columns: repeat(4, minmax(150px, 1fr));
-    gap: 15px 10px; /* Відступ між карточками */
+    gap: 10px 10px; /* Відступ між карточками */
     justify-content: flex-start; /* Змінюємо властивість justify-content */
     // border: 1px solid yellow;
     margin-right: 5px;
@@ -63,13 +63,19 @@
   border: 2px solid blue;
 }
 
+@media (max-width: 1360px) {
+  .wrapperBook {
+    .bookMain {
+      grid-template-columns: repeat(4, minmax(125px, 1fr));
+    }
+  }
+}
+
 @media (max-width: 1000px) {
   .wrapperBook {
     gap: 10px;
     .bookMain {
-      // border: 1px solid red;
       grid-template-columns: repeat(3, minmax(125px, 1fr));
-      gap: 15px 10px; /* Відступ між карточками */
     }
   }
 }

@@ -1,21 +1,66 @@
-.cardBook {
+.bookPages {
   max-width: 800px;
   width: 100%;
-  display: grid;
-  grid-template-columns: 45% 55%; /* Лівий блок - 30%, правий блок - 70% */
-  justify-content: space-between;
-  gap: 20px; /* Проміжок між блоками */
 
-  .bookImage {
-    width: 100%;
+  .backToBookStore {
+    margin-bottom: 30px;
 
-    img {
-      width: 100%;
+    a {
+      &:hover {
+        color: rgba(255, 255, 255, 0.5);
+      }
     }
   }
 
-  .bookCaption {
-    overflow: hidden;
-    max-width: 100%;
+  .cardBook {
+    // display: grid;
+    // grid-template-columns: 45% 55%; /* Лівий блок - 30%, правий блок - 70% */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px; /* Проміжок між блоками */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 15px;
+
+    .cardTitle {
+      margin-bottom: 20px;
+    }
+
+    .cardCaption {
+      display: flex;
+      gap: 20px;
+      // border: 1px solid red;
+
+      .bookImage {
+        // border: 1px solid blue;
+        flex: 1;
+        max-width: 400px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .bookCaption {
+        // border: 1px solid blue;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .caption,
+        .genre,
+        .year {
+          font-size: 20px;
+        }
+      }
+
+      .hr {
+        width: 50%;
+        margin: 10px 0 25px 0;
+      }
+    }
   }
 }
