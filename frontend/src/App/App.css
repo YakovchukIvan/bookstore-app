@@ -16,7 +16,7 @@ header {
 header,
 footer {
   background-color: #9897da50;
-  padding: 15px;
+  padding: 15px 10px;
 }
 
 nav a {

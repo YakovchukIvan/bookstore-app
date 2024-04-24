@@ -1,14 +1,34 @@
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 // import books from '../../data/books';
 
 import styles from './MainBook.module.scss';
 import FilterBookStore from './FilterBookStore';
-import { selectBooks } from '../../redux/bookSlices';
+import { selectBooks } from '../../redux//slices/bookSlices';
+import {
+  selectAuthorFilter,
+  selectTitleFilter,
+} from '../../redux/slices/filterSlices';
 
 function BookStore() {
+  const dispatch = useDispatch();
+
   const books = useSelector(selectBooks);
+  const titleFilter = useSelector(selectTitleFilter);
+  const authorFilter = useSelector(selectAuthorFilter);
+
+  const filterBooks = books.filter((book) => {
+    const matchesTitle = book.title
+      .toLowerCase()
+      .includes(titleFilter.toLowerCase());
+
+    const matchesAuthor = book.author
+      .toLowerCase()
+      .includes(authorFilter.toLowerCase());
+
+    return matchesTitle && matchesAuthor;
+  });
 
   return (
     <div className={styles.wrapperBook}>
@@ -27,7 +47,7 @@ function BookStore() {
         </div>
 
         <div className={styles.bookMain}>
-          {books.map((book) => (
+          {filterBooks.map((book) => (
             <div className={styles.blockListBook} key={book.idBook}>
               <Link to={book.slug} className={styles.bookLink}>
                 <img src={book.imgSrc} alt="img" />
