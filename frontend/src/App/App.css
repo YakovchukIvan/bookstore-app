@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+header {
+  margin-bottom: 25px;
+}
+
 header,
 footer {
   background-color: #9897da50;

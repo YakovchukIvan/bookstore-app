@@ -8,7 +8,8 @@ const books = [
     year: 1960,
     imgSrc: '/img/book/1.jpg',
     isFavorite: false,
-    genre: 'Художня література',
+    genre: 'artistic-literature',
+    genreUA: 'Художня література',
     slug: 'vbyty-peresmishnyka',
   },
   {
@@ -19,7 +20,8 @@ const books = [
     year: 1949,
     imgSrc: '/img/book/2.jpg',
     isFavorite: true,
-    genre: 'Наукова фантастика',
+    genre: 'science-fiction',
+    genreUA: 'Наукова фантастика',
     slug: '1984',
   },
   {
@@ -30,7 +32,8 @@ const books = [
     year: 1997,
     imgSrc: '/img/book/3.jpg',
     isFavorite: true,
-    genre: 'Фентезі',
+    genre: 'fantasy',
+    genreUA: 'Фентезі',
     slug: 'garri-potter-i-filosofskyy-kamin',
   },
   {
@@ -41,7 +44,8 @@ const books = [
     year: 1977,
     imgSrc: '/img/book/4.jpg',
     isFavorite: false,
-    genre: 'Філософія',
+    genre: 'philosophy',
+    genreUA: 'Філософія',
     slug: 'ilyuziyi',
   },
   {
@@ -52,7 +56,8 @@ const books = [
     year: 1943,
     imgSrc: '/img/book/5.jpg',
     isFavorite: true,
-    genre: 'Філософія',
+    genre: 'philosophy',
+    genreUA: 'Філософія',
     slug: 'malenkiy-prync',
   },
   {
@@ -63,7 +68,8 @@ const books = [
     year: 1869,
     imgSrc: '/img/book/6.jpg',
     isFavorite: false,
-    genre: 'Історична проза',
+    genre: 'historical-prose',
+    genreUA: 'Історична проза',
     slug: 'viyna-i-mir',
   },
   {
@@ -74,7 +80,8 @@ const books = [
     year: 2008,
     imgSrc: '/img/book/7.jpg',
     isFavorite: true,
-    genre: 'Наукова фантастика',
+    genre: 'science-fiction',
+    genreUA: 'Наукова фантастика',
     slug: 'holodni-igry',
   },
   {
@@ -85,7 +92,8 @@ const books = [
     year: 1996,
     imgSrc: '/img/book/8.jpg',
     isFavorite: true,
-    genre: 'Фентезі',
+    genre: 'fantasy',
+    genreUA: 'Фентезі',
     slug: 'hra-prestoliv-vohon-i-krov',
   },
   {
@@ -97,7 +105,8 @@ const books = [
     year: 1966,
     imgSrc: '/img/book/9.jpg',
     isFavorite: false,
-    genre: 'Історична проза',
+    genre: 'historical-prose',
+    genreUA: 'Історична проза',
     slug: 'dzherkalo-dlya-geroya',
   },
   {
@@ -109,7 +118,8 @@ const books = [
     year: 2007,
     imgSrc: '/img/book/10.jpg',
     isFavorite: true,
-    genre: 'Фентезі',
+    genre: 'fantasy',
+    genreUA: 'Фентезі',
     slug: 'kvout-vbyvtsya-korolya',
   },
 ];
