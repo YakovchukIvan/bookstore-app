@@ -3,13 +3,15 @@ import { useDispatch, useSelector } from 'react-redux';
 
 // import books from '../../data/books';
 
-import styles from './MainBook.module.scss';
 import FilterBookStore from './FilterBookStore';
 import { selectBooks } from '../../redux//slices/bookSlices';
 import {
   selectAuthorFilter,
   selectTitleFilter,
 } from '../../redux/slices/filterSlices';
+import ComboBox from '../../components/SortSelect';
+
+import styles from './MainBook.module.scss';
 
 function BookStore() {
   const dispatch = useDispatch();
@@ -42,7 +44,7 @@ function BookStore() {
             </span>
           </div>
           <div className={styles.sorting}>
-            <button>Сортування</button>
+            <ComboBox />
           </div>
         </div>
 
