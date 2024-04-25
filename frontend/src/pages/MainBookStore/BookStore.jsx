@@ -42,7 +42,7 @@ function BookStore() {
             </span>
           </div>
           <div className={styles.sorting}>
-            <span>Сортування</span>
+            <button>Сортування</button>
           </div>
         </div>
 
