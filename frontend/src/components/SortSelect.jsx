@@ -1,25 +1,21 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
-import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import NativeSelect from '@mui/material/NativeSelect';
 import InputBase from '@mui/material/InputBase';
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
-  'label + &': {
-    marginTop: theme.spacing(3),
-  },
   '& .MuiInputBase-input': {
+    width: '135px',
     borderRadius: 4,
     position: 'relative',
     backgroundColor: theme.palette.background.paper,
-    border: '1px solid #ced4da',
+    border: '1px solid #aa89cf41',
+    color: 'white',
     fontSize: 16,
     padding: '10px 26px 10px 12px',
-    transition: theme.transitions.create(['border-color', 'box-shadow']),
-    // Use the system font instead of the default Roboto font.
+    background: 'rgba(255, 255, 255, 0.1)',
     fontFamily: [
       '-apple-system',
       'BlinkMacSystemFont',
@@ -33,55 +29,34 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
       '"Segoe UI Symbol"',
     ].join(','),
     '&:focus': {
+      background: 'rgba(255, 255, 255, 0.1)',
       borderRadius: 4,
-      borderColor: 'red',
-      boxShadow: '0 0 0 0.2rem red',
+      borderColor: 'none',
     },
   },
 }));
 
 export default function CustomizedSelects() {
-  const [age, setAge] = React.useState('');
+  const [sort, setSort] = React.useState('по популярності'); // Початкове значення "по популярності"
+
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setSort(event.target.value);
+    console.log(sort);
   };
+
   return (
-    <div>
-      <FormControl sx={{ m: 1 }} variant="standard">
-        <InputLabel htmlFor="demo-customized-textbox">Age</InputLabel>
-        <BootstrapInput id="demo-customized-textbox" />
-      </FormControl>
-      <FormControl sx={{ m: 1 }} variant="standard">
-        <InputLabel id="demo-customized-select-label">Age</InputLabel>
-        <Select
-          labelId="demo-customized-select-label"
-          id="demo-customized-select"
-          value={age}
-          onChange={handleChange}
-          input={<BootstrapInput />}
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
-      </FormControl>
-      <FormControl sx={{ m: 1 }} variant="standard">
-        <InputLabel htmlFor="demo-customized-select-native">Age</InputLabel>
-        <NativeSelect
-          id="demo-customized-select-native"
-          value={age}
-          onChange={handleChange}
-          input={<BootstrapInput />}
-        >
-          <option aria-label="None" value="" />
-          <option value={10}>Ten</option>
-          <option value={20}>Twenty</option>
-          <option value={30}>Thirty</option>
-        </NativeSelect>
-      </FormControl>
-    </div>
+    <FormControl variant="standard">
+      <Select
+        labelId="demo-customized-select-label"
+        id="demo-customized-select"
+        value={sort}
+        onChange={handleChange}
+        input={<BootstrapInput />}
+      >
+        <MenuItem value={'по популярності'}>по популярності</MenuItem>
+        <MenuItem value={'по назві'}>по назві</MenuItem>
+        <MenuItem value={'по даті'}>по даті</MenuItem>
+      </Select>
+    </FormControl>
   );
 }

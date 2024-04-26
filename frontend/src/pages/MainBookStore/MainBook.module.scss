@@ -12,9 +12,10 @@
   .titleBookStore {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: clamp(0.875rem, 0.725rem + 0.75vw, 1.625rem);
     font-weight: 500;
-    margin: 10px 10px 15px 0;
+    margin: 0px 5px 15px 0;
   }
 
   .bookMain {
