@@ -7,6 +7,7 @@ import {
   setTitleFilter,
   setAuthorFilter,
   resetFilters,
+  selectGenreFilter,
 } from '../../redux/slices/filterSlices';
 import { selectBooks } from '../../redux/slices/bookSlices';
 
@@ -40,6 +41,7 @@ function FilterBookStore() {
   const books = useSelector(selectBooks);
   // const [filteredBooks, setFilteredBooks] = useState(books);
   const [selectedGenres, setSelectedGenres] = useState([]);
+  console.log('main', selectedGenres);
 
   const dispatch = useDispatch();
   const titleFilter = useSelector(selectTitleFilter);
@@ -58,22 +60,14 @@ function FilterBookStore() {
     console.log(genre);
     if (selectedGenres.includes(genre)) {
       setSelectedGenres(selectedGenres.filter((item) => item !== genre));
+      useDispatch(selectGenreFilter(selectedGenres));
+      console.log('1', selectedGenres);
     } else {
       setSelectedGenres([...selectedGenres, genre]);
+      console.log('2', selectedGenres);
+      useDispatch(selectGenreFilter(selectedGenres));
     }
   };
-
-  // Функція для сортування книг за вибраними жанрами
-  // const handleSortByGenres = () => {
-  //   if (selectedGenres.length === 0) {
-  //     setFilteredBooks(books); // якщо нічого не вибрано, показати всі книги
-  //   } else {
-  //     const filtered = books.filter((book) =>
-  //       selectedGenres.includes(book.genre)
-  //     );
-  //     setFilteredBooks(filtered);
-  //   }
-  // };
 
   const handleResetFilters = () => {
     dispatch(resetFilters());
