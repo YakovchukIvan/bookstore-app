@@ -40,3 +40,34 @@ body::-webkit-scrollbar-thumb:vertical {
 body::-webkit-scrollbar-button {
   display: none; /* Приховати кнопки */
 }
+
+.pagesSort {
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.genreCheckbox > label,
+label > input {
+  cursor: pointer;
+}
+
+.genreCheckbox > label > input {
+  margin: 5px;
+}
+
+.bookGenre {
+  /* border: 1px solid #000; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.bookGenre div {
+  background-color: #17415373;
+  border: 2px solid #395966;
+  border-radius: 6px;
+  padding: 6px;
+}

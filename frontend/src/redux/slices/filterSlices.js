@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   title: '',
   author: '',
+  genre: [],
 };
 
 const filterSlice = createSlice({
@@ -15,16 +16,22 @@ const filterSlice = createSlice({
     setAuthorFilter: (state, action) => {
       return { ...state, author: action.payload };
     },
+    setGenreFilter: (state, action) => {
+      console.log(state);
+      console.log(action);
+      return { ...state };
+    },
     resetFilters: () => {
       return initialState;
     },
   },
 });
 
-export const { setTitleFilter, setAuthorFilter, resetFilters } =
+export const { setTitleFilter, setAuthorFilter, setGenreFilter, resetFilters } =
   filterSlice.actions;
 
 export const selectTitleFilter = (state) => state.filter.title;
 export const selectAuthorFilter = (state) => state.filter.author;
+export const selectGenreFilter = (state) => state.filter.genre;
 
 export default filterSlice.reducer;

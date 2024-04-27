@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import styles from './MainBook.module.scss';
+
 import {
   selectAuthorFilter,
   selectTitleFilter,
@@ -8,6 +9,8 @@ import {
   resetFilters,
 } from '../../redux/slices/filterSlices';
 import { selectBooks } from '../../redux/slices/bookSlices';
+
+import styles from './MainBook.module.scss';
 
 const genreBooks = (books) => {
   const genreMap = {};
@@ -35,6 +38,8 @@ const genreBooks = (books) => {
 
 function FilterBookStore() {
   const books = useSelector(selectBooks);
+  // const [filteredBooks, setFilteredBooks] = useState(books);
+  const [selectedGenres, setSelectedGenres] = useState([]);
 
   const dispatch = useDispatch();
   const titleFilter = useSelector(selectTitleFilter);
@@ -47,6 +52,28 @@ function FilterBookStore() {
   const handleAuthorFilterChange = (e) => {
     dispatch(setAuthorFilter(e.target.value));
   };
+
+  // Функція для додавання або видалення жанру зі списку вибраних
+  const handleGenreChange = (genre) => {
+    console.log(genre);
+    if (selectedGenres.includes(genre)) {
+      setSelectedGenres(selectedGenres.filter((item) => item !== genre));
+    } else {
+      setSelectedGenres([...selectedGenres, genre]);
+    }
+  };
+
+  // Функція для сортування книг за вибраними жанрами
+  // const handleSortByGenres = () => {
+  //   if (selectedGenres.length === 0) {
+  //     setFilteredBooks(books); // якщо нічого не вибрано, показати всі книги
+  //   } else {
+  //     const filtered = books.filter((book) =>
+  //       selectedGenres.includes(book.genre)
+  //     );
+  //     setFilteredBooks(filtered);
+  //   }
+  // };
 
   const handleResetFilters = () => {
     dispatch(resetFilters());
@@ -87,17 +114,25 @@ function FilterBookStore() {
 
       <div className={styles.searchGenre}>
         <p>Пошук по жанру: </p>
-        {genresBooks.map((genre, index) => (
-          <div key={genre + index}>
+        {genresBooks.map(({ genre, genreUA }, index) => (
+          <div key={genreUA + index}>
             <label
-              htmlFor={`checkbox-${genre.genre}`}
-              className={`checkbox-${genre.genre}`}
+              htmlFor={`checkbox-${genre}`}
+              className={`checkbox-${genre}`}
             >
-              <input id={`checkbox-${genre.genre}`} type="checkbox" />
-              <span>{genre.genreUA}</span>
+              <input
+                id={`checkbox-${genre}`}
+                type="checkbox"
+                checked={selectedGenres.includes(genre)}
+                onChange={() => handleGenreChange(genre)}
+              />
+              <span>{genreUA}</span>
             </label>
           </div>
         ))}
+        {/* <button onClick={handleSortByGenres}>
+          Сортувати за обраними жанрами
+        </button> */}
       </div>
     </div>
   );
