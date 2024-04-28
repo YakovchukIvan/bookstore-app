@@ -8,6 +8,7 @@ import {
   setAuthorFilter,
   resetFilters,
   selectGenreFilter,
+  setGenreFilter,
 } from '../../redux/slices/filterSlices';
 import { selectBooks } from '../../redux/slices/bookSlices';
 
@@ -57,16 +58,22 @@ function FilterBookStore() {
 
   // Функція для додавання або видалення жанру зі списку вибраних
   const handleGenreChange = (genre) => {
-    console.log(genre);
-    if (selectedGenres.includes(genre)) {
-      setSelectedGenres(selectedGenres.filter((item) => item !== genre));
-      useDispatch(selectGenreFilter(selectedGenres));
-      console.log('1', selectedGenres);
+    const dispatch = useDispatch();
+
+    // Перевірка, чи вже є жанр у списку обраних
+    const isSelected = selectedGenres.includes(genre);
+
+    // Оновлення списку обраних жанрів
+    if (isSelected) {
+      const updatedGenres = selectedGenres.filter((item) => item !== genre);
+      setSelectedGenres(updatedGenres);
     } else {
-      setSelectedGenres([...selectedGenres, genre]);
-      console.log('2', selectedGenres);
-      useDispatch(selectGenreFilter(selectedGenres));
+      const updatedGenres = [...selectedGenres, genre];
+      setSelectedGenres(updatedGenres);
     }
+
+    // Виклик дії redux з новим списком обраних жанрів
+    dispatch(selectGenreFilter(updatedGenres));
   };
 
   const handleResetFilters = () => {

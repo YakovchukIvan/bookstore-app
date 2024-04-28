@@ -19,7 +19,7 @@ const filterSlice = createSlice({
     setGenreFilter: (state, action) => {
       console.log(state);
       console.log(action);
-      return { ...state };
+      return { ...state, genre: action.payload };
     },
     resetFilters: () => {
       return initialState;
