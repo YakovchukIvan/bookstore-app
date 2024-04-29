@@ -9,7 +9,8 @@
     "isFavorite": false,
     "genre": "artistic-literature",
     "genreUA": "Художня література",
-    "slug": "vbyty-peresmishnyka"
+    "slug": "vbyty-peresmishnyka",
+    "dateOfEntry": "15.04.24"
   },
   {
     "idBook": 2,
@@ -21,7 +22,8 @@
     "isFavorite": true,
     "genre": "science-fiction",
     "genreUA": "Наукова фантастика",
-    "slug": "1984"
+    "slug": "1984",
+    "dateOfEntry": "16.04.24"
   },
   {
     "idBook": 3,
@@ -33,7 +35,8 @@
     "isFavorite": true,
     "genre": "fantasy",
     "genreUA": "Фентезі",
-    "slug": "garri-potter-i-filosofskyy-kamin"
+    "slug": "garri-potter-i-filosofskyy-kamin",
+    "dateOfEntry": "17.04.24"
   },
   {
     "idBook": 4,
@@ -45,7 +48,8 @@
     "isFavorite": false,
     "genre": "philosophy",
     "genreUA": "Філософія",
-    "slug": "ilyuziyi"
+    "slug": "ilyuziyi",
+    "dateOfEntry": "18.04.24"
   },
   {
     "idBook": 5,
@@ -57,7 +61,8 @@
     "isFavorite": true,
     "genre": "philosophy",
     "genreUA": "Філософія",
-    "slug": "malenkiy-prync"
+    "slug": "malenkiy-prync",
+    "dateOfEntry": "19.08.24"
   },
   {
     "idBook": 6,
@@ -69,7 +74,8 @@
     "isFavorite": false,
     "genre": "historical-prose",
     "genreUA": "Історична проза",
-    "slug": "viyna-i-mir"
+    "slug": "viyna-i-mir",
+    "dateOfEntry": "20.08.24"
   },
   {
     "idBook": 7,
@@ -81,7 +87,8 @@
     "isFavorite": true,
     "genre": "science-fiction",
     "genreUA": "Наукова фантастика",
-    "slug": "holodni-igry"
+    "slug": "holodni-igry",
+    "dateOfEntry": "21.04.24"
   },
   {
     "idBook": 8,
@@ -93,7 +100,8 @@
     "isFavorite": true,
     "genre": "fantasy",
     "genreUA": "Фентезі",
-    "slug": "hra-prestoliv-vohon-i-krov"
+    "slug": "hra-prestoliv-vohon-i-krov",
+    "dateOfEntry": "22.04.24"
   },
   {
     "idBook": 9,
@@ -105,7 +113,8 @@
     "isFavorite": false,
     "genre": "historical-prose",
     "genreUA": "Історична проза",
-    "slug": "dzherkalo-dlya-geroya"
+    "slug": "dzherkalo-dlya-geroya",
+    "dateOfEntry": "23.04.24"
   },
   {
     "idBook": 10,
@@ -117,6 +126,7 @@
     "isFavorite": true,
     "genre": "fantasy",
     "genreUA": "Фентезі",
-    "slug": "kvout-vbyvtsya-korolya"
+    "slug": "kvout-vbyvtsya-korolya",
+    "dateOfEntry": "24.04.24"
   }
 ]

@@ -14,7 +14,7 @@ function SingleBook() {
     const fetchBook = async (slug) => {
       try {
         const res = await axios.get(URL_BOOKS + `/${slug}`);
-        console.log(res);
+        // console.log(res);
         setBook(res.data);
         setIsLoading(false);
         return res.data;

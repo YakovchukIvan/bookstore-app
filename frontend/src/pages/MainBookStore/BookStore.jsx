@@ -7,6 +7,7 @@ import FilterBookStore from './FilterBookStore';
 import { selectBooks } from '../../redux//slices/bookSlices';
 import {
   selectAuthorFilter,
+  selectGenreFilter,
   selectTitleFilter,
 } from '../../redux/slices/filterSlices';
 import ComboBox from '../../components/SortSelect';
@@ -14,9 +15,8 @@ import ComboBox from '../../components/SortSelect';
 import styles from './MainBook.module.scss';
 
 function BookStore() {
-  const dispatch = useDispatch();
-
   const books = useSelector(selectBooks);
+  const genre = useSelector(selectGenreFilter);
   const titleFilter = useSelector(selectTitleFilter);
   const authorFilter = useSelector(selectAuthorFilter);
 
@@ -29,7 +29,9 @@ function BookStore() {
       .toLowerCase()
       .includes(authorFilter.toLowerCase());
 
-    return matchesTitle && matchesAuthor;
+    const matchesGenre = genre.length === 0 || genre.includes(book.genre);
+
+    return matchesTitle && matchesAuthor && matchesGenre;
   });
 
   return (
@@ -55,7 +57,7 @@ function BookStore() {
                 <img src={book.imgSrc} alt="img" />
               </Link>
               <Link to={book.slug} className={styles.bookLink}>
-                <span>{book.title}</span>
+                <span>{book.genreUA}</span>
               </Link>
             </div>
           ))}

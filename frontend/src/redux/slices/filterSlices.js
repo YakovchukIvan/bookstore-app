@@ -17,9 +17,16 @@ const filterSlice = createSlice({
       return { ...state, author: action.payload };
     },
     setGenreFilter: (state, action) => {
-      console.log(state);
-      console.log(action);
-      return { ...state, genre: action.payload };
+      return {
+        ...state,
+        genre: [...state.genre, action.payload], // Додаємо нове значення до масиву
+      };
+    },
+    setDeleteGenreFilter: (state, action) => {
+      return {
+        ...state,
+        genre: state.genre.filter((genr) => genr !== action.payload),
+      };
     },
     resetFilters: () => {
       return initialState;
@@ -27,8 +34,13 @@ const filterSlice = createSlice({
   },
 });
 
-export const { setTitleFilter, setAuthorFilter, setGenreFilter, resetFilters } =
-  filterSlice.actions;
+export const {
+  setTitleFilter,
+  setAuthorFilter,
+  setGenreFilter,
+  setDeleteGenreFilter,
+  resetFilters,
+} = filterSlice.actions;
 
 export const selectTitleFilter = (state) => state.filter.title;
 export const selectAuthorFilter = (state) => state.filter.author;

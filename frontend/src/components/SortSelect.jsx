@@ -4,6 +4,8 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import InputBase from '@mui/material/InputBase';
+import { useSelector } from 'react-redux';
+import { selectBooks } from '../redux/slices/bookSlices';
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   '& .MuiInputBase-input': {
@@ -38,10 +40,11 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
 
 export default function CustomizedSelects() {
   const [sort, setSort] = React.useState('по популярності'); // Початкове значення "по популярності"
+  const books = useSelector(selectBooks);
 
   const handleChange = (event) => {
     setSort(event.target.value);
-    console.log(sort);
+    // console.log(sort);
   };
 
   return (

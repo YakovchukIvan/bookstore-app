@@ -7,8 +7,9 @@ import {
   setTitleFilter,
   setAuthorFilter,
   resetFilters,
-  selectGenreFilter,
   setGenreFilter,
+  setDeleteGenreFilter,
+  selectGenreFilter,
 } from '../../redux/slices/filterSlices';
 import { selectBooks } from '../../redux/slices/bookSlices';
 
@@ -39,14 +40,14 @@ const genreBooks = (books) => {
 };
 
 function FilterBookStore() {
-  const books = useSelector(selectBooks);
-  // const [filteredBooks, setFilteredBooks] = useState(books);
-  const [selectedGenres, setSelectedGenres] = useState([]);
-  console.log('main', selectedGenres);
-
   const dispatch = useDispatch();
+
+  const books = useSelector(selectBooks);
+  const currentGenre = useSelector(selectGenreFilter);
   const titleFilter = useSelector(selectTitleFilter);
   const authorFilter = useSelector(selectAuthorFilter);
+
+  const [selectedGenres, setSelectedGenres] = useState(currentGenre);
 
   const handleTitleFilterChange = (e) => {
     dispatch(setTitleFilter(e.target.value));
@@ -58,26 +59,21 @@ function FilterBookStore() {
 
   // Функція для додавання або видалення жанру зі списку вибраних
   const handleGenreChange = (genre) => {
-    const dispatch = useDispatch();
-
-    // Перевірка, чи вже є жанр у списку обраних
-    const isSelected = selectedGenres.includes(genre);
-
     // Оновлення списку обраних жанрів
-    if (isSelected) {
-      const updatedGenres = selectedGenres.filter((item) => item !== genre);
-      setSelectedGenres(updatedGenres);
-    } else {
-      const updatedGenres = [...selectedGenres, genre];
-      setSelectedGenres(updatedGenres);
-    }
+    if (selectedGenres.includes(genre)) {
+      dispatch(setDeleteGenreFilter(genre));
 
-    // Виклик дії redux з новим списком обраних жанрів
-    dispatch(selectGenreFilter(updatedGenres));
+      const genr = selectedGenres.filter((item) => item !== genre);
+      setSelectedGenres(genr);
+    } else {
+      setSelectedGenres([...selectedGenres, genre]);
+      dispatch(setGenreFilter(genre));
+    }
   };
 
   const handleResetFilters = () => {
     dispatch(resetFilters());
+    setSelectedGenres([]);
   };
 
   const genresBooks = genreBooks(books);
