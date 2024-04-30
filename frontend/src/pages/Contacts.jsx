@@ -1,117 +1,52 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { selectBooks } from '../redux/slices/bookSlices';
+import { SORT_KEYS } from '../utils/name';
 
-const genreBooks = (books) => {
-  const genreMap = {};
-
-  books.forEach((book) => {
-    const { genre, genreUA } = book;
-    if (!genreMap[genre]) {
-      genreMap[genre] = {
-        genre,
-        genreUA,
-        books: [book],
-      };
-    } else {
-      genreMap[genre].books.push(book);
-    }
-  });
-
-  const uniqueGenresArray = Object.values(genreMap).map((item) => ({
-    genre: item.genre,
-    genreUA: item.genreUA,
-  }));
-
-  return uniqueGenresArray;
-};
+// const SORT_KEYS = ['по популярності', 'по назві', 'по даті'];
 
 function Contacts() {
   const booksData = useSelector(selectBooks);
-  const [filteredBooks, setFilteredBooks] = useState(booksData);
-  const [selectedGenres, setSelectedGenres] = useState([]);
+  console.log('  booksData:', booksData);
+  const [books, setBooks] = useState(booksData);
+  console.log('  books:', books);
 
-  // Функція для додавання або видалення жанру зі списку вибраних
-  const handleGenreChange = (genre) => {
-    if (selectedGenres.includes(genre)) {
-      setSelectedGenres(selectedGenres.filter((item) => item !== genre));
-    } else {
-      setSelectedGenres([...selectedGenres, genre]);
+  useEffect(() => {
+    if (booksData && booksData.length > 0) {
+      setBooks(booksData);
     }
-  };
+  }, [booksData]);
 
-  // Функція для сортування книг за вибраними жанрами
-  const handleSortByGenres = () => {
-    if (selectedGenres.length === 0) {
-      setFilteredBooks(booksData); // якщо нічого не вибрано, показати всі книги
-    } else {
-      const filtered = booksData.filter((book) =>
-        selectedGenres.includes(book.genre)
-      );
-      setFilteredBooks(filtered);
-    }
+  const sortBooks = (sort) => {
+    console.log(sort);
+    const test = [...books].sort((a, b) => b.rating - a.rating);
+    console.log(test);
+    setBooks(test);
   };
-
-  const genresBooks = genreBooks(booksData);
-  console.log('Contacts  genresBooks:', genresBooks);
 
   return (
     <div>
       {/* Чекбокси для вибору жанрів */}
       <div className="pagesSort">
-        {genresBooks.map(({ genre, genreUA }, index) => (
-          <div className="genreCheckbox" key={genre + index}>
-            <label>
-              <input
-                type="checkbox"
-                checked={selectedGenres.includes(genre)}
-                onChange={() => handleGenreChange(genre)}
-              />
-              {genreUA}
-            </label>
-          </div>
+        {SORT_KEYS.map((sort) => (
+          <button onClick={() => sortBooks(sort)} key={sort}>
+            {sort}
+          </button>
         ))}
       </div>
-      {/* <label>
-        Фентезі
-        <input
-          type="checkbox"
-          checked={selectedGenres.includes('fantasy')}
-          onChange={() => handleGenreChange('fantasy')}
-        />
-      </label>
-      <label>
-        Наукова фантастика
-        <input
-          type="checkbox"
-          checked={selectedGenres.includes('science-fiction')}
-          onChange={() => handleGenreChange('science-fiction')}
-        />
-      </label>
-      <label>
-        Художня література
-        <input
-          type="checkbox"
-          checked={selectedGenres.includes('artistic-literature')}
-          onChange={() => handleGenreChange('artistic-literature')}
-        />
-      </label> */}
-      {/* Додайте інші чекбокси для інших жанрів, які вам потрібні */}
-
-      {/* Кнопка для сортування за обраними жанрами */}
-      <button onClick={handleSortByGenres}>
-        Сортувати за обраними жанрами
-      </button>
 
       {/* Виведення відфільтрованих книг */}
       <div className="bookGenre">
-        {filteredBooks.map((book) => (
+        {books.map((book) => (
           <div key={book.idBook}>
-            {/* <h3>{book.title}</h3> */}
-            {/* <p>{book.author}</p> */}
-            <p>{book.genreUA}</p>
-            {/* Додайте інші дані книги */}
+            <p>
+              <strong>{book.title}</strong>
+            </p>
+            <p>
+              Rating <strong> {book.rating}</strong>
+            </p>
+            <p>{book.dateOfEntry}</p>
           </div>
         ))}
       </div>

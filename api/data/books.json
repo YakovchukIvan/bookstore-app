@@ -10,7 +10,9 @@
     "genre": "artistic-literature",
     "genreUA": "Художня література",
     "slug": "vbyty-peresmishnyka",
-    "dateOfEntry": "15.04.24"
+    "dateOfEntry": "15.04.24",
+    "rating": 14,
+    "reviewCount": 0
   },
   {
     "idBook": 2,
@@ -23,7 +25,9 @@
     "genre": "science-fiction",
     "genreUA": "Наукова фантастика",
     "slug": "1984",
-    "dateOfEntry": "16.04.24"
+    "dateOfEntry": "16.04.24",
+    "rating": 11,
+    "reviewCount": 0
   },
   {
     "idBook": 3,
@@ -36,7 +40,9 @@
     "genre": "fantasy",
     "genreUA": "Фентезі",
     "slug": "garri-potter-i-filosofskyy-kamin",
-    "dateOfEntry": "17.04.24"
+    "dateOfEntry": "17.04.24",
+    "rating": 1,
+    "reviewCount": 0
   },
   {
     "idBook": 4,
@@ -49,7 +55,9 @@
     "genre": "philosophy",
     "genreUA": "Філософія",
     "slug": "ilyuziyi",
-    "dateOfEntry": "18.04.24"
+    "dateOfEntry": "18.04.24",
+    "rating": 0,
+    "reviewCount": 0
   },
   {
     "idBook": 5,
@@ -62,7 +70,9 @@
     "genre": "philosophy",
     "genreUA": "Філософія",
     "slug": "malenkiy-prync",
-    "dateOfEntry": "19.08.24"
+    "dateOfEntry": "19.08.24",
+    "rating": 4,
+    "reviewCount": 0
   },
   {
     "idBook": 6,
@@ -75,7 +85,9 @@
     "genre": "historical-prose",
     "genreUA": "Історична проза",
     "slug": "viyna-i-mir",
-    "dateOfEntry": "20.08.24"
+    "dateOfEntry": "20.08.24",
+    "rating": 3,
+    "reviewCount": 0
   },
   {
     "idBook": 7,
@@ -88,7 +100,9 @@
     "genre": "science-fiction",
     "genreUA": "Наукова фантастика",
     "slug": "holodni-igry",
-    "dateOfEntry": "21.04.24"
+    "dateOfEntry": "21.04.24",
+    "rating": 45,
+    "reviewCount": 0
   },
   {
     "idBook": 8,
@@ -101,7 +115,9 @@
     "genre": "fantasy",
     "genreUA": "Фентезі",
     "slug": "hra-prestoliv-vohon-i-krov",
-    "dateOfEntry": "22.04.24"
+    "dateOfEntry": "22.04.24",
+    "rating": 96,
+    "reviewCount": 0
   },
   {
     "idBook": 9,
@@ -114,7 +130,9 @@
     "genre": "historical-prose",
     "genreUA": "Історична проза",
     "slug": "dzherkalo-dlya-geroya",
-    "dateOfEntry": "23.04.24"
+    "dateOfEntry": "23.04.24",
+    "rating": 13,
+    "reviewCount": 0
   },
   {
     "idBook": 10,
@@ -127,6 +145,8 @@
     "genre": "fantasy",
     "genreUA": "Фентезі",
     "slug": "kvout-vbyvtsya-korolya",
-    "dateOfEntry": "24.04.24"
+    "dateOfEntry": "24.04.24",
+    "rating": 135,
+    "reviewCount": 0
   }
 ]

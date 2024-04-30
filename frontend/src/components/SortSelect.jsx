@@ -5,7 +5,9 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import InputBase from '@mui/material/InputBase';
 import { useSelector } from 'react-redux';
+
 import { selectBooks } from '../redux/slices/bookSlices';
+import { SORT_KEYS } from '../utils/name';
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   '& .MuiInputBase-input': {
@@ -38,6 +40,8 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+// const SORT_KEYS = ['по популярності', 'по назві', 'по даті'];
+
 export default function CustomizedSelects() {
   const [sort, setSort] = React.useState('по популярності'); // Початкове значення "по популярності"
   const books = useSelector(selectBooks);
@@ -56,9 +60,14 @@ export default function CustomizedSelects() {
         onChange={handleChange}
         input={<BootstrapInput />}
       >
-        <MenuItem value={'по популярності'}>по популярності</MenuItem>
-        <MenuItem value={'по назві'}>по назві</MenuItem>
-        <MenuItem value={'по даті'}>по даті</MenuItem>
+        {SORT_KEYS.map((item) => (
+          <MenuItem value={item} key={item}>
+            {item}
+          </MenuItem>
+        ))}
+        {/* <MenuItem value={'по популярності'}>по популярності</MenuItem> */}
+        {/* <MenuItem value={'по назві'}>по назві</MenuItem>
+        <MenuItem value={'по даті'}>по даті</MenuItem> */}
       </Select>
     </FormControl>
   );
