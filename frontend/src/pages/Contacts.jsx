@@ -8,9 +8,7 @@ import { SORT_KEYS } from '../utils/name';
 
 function Contacts() {
   const booksData = useSelector(selectBooks);
-  console.log('  booksData:', booksData);
   const [books, setBooks] = useState(booksData);
-  console.log('  books:', books);
 
   useEffect(() => {
     if (booksData && booksData.length > 0) {
