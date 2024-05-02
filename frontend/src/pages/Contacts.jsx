@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { selectBooks } from '../redux/slices/bookSlices';
 import { SORT_KEYS } from '../utils/name';
 
-// const SORT_KEYS = ['по популярності', 'по назві', 'по даті'];
+// const SORT_KEYS = ['по популярності', 'по назві', 'по даті'] ;
 
 function Contacts() {
   const booksData = useSelector(selectBooks);
