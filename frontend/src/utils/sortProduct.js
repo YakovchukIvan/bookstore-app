@@ -13,7 +13,7 @@ export const sortBooks = (books, sort) => {
       break;
     case SORT_KEYS[2]:
       sortedBooks.sort(
-        (a, b) => new Date(a.dateOfEntry) - new Date(b.dateOfEntry)
+        (a, b) => new Date(b.dateOfEntry) - new Date(a.dateOfEntry)
       );
       break;
     default:
