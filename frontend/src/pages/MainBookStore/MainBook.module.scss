@@ -37,15 +37,36 @@
       color: rgba(255, 255, 255, 0.767);
       padding: 10px;
 
+      .cardBookInfo {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+
+        div {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 2px;
+          color: white;
+          cursor: default;
+        }
+      }
+
       .bookLink {
         width: 100%;
-        text-align: left;
-        white-space: nowrap; /* Запобігає переносу тексту */
-        overflow: hidden; /* Приховує будь-який вміст, який виходить за межі блоку */
-        text-overflow: ellipsis; /* Додає "..." в кінці тексту, який виходить за межі блоку */
+        text-align: center;
         font-size: clamp(0.75rem, 0.568rem + 0.91vw, 1.25rem);
         font-weight: 500;
         color: rgba(255, 255, 255, 0.705);
+
+        display: flex;
+        flex-direction: column;
+
+        span {
+          white-space: nowrap; /* Запобігає переносу тексту */
+          overflow: hidden; /* Приховує будь-який вміст, який виходить за межі блоку */
+          text-overflow: ellipsis; /* Додає "..." в кінці тексту, який виходить за межі блоку */
+        }
 
         &:hover {
           color: white;

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { FaStar } from 'react-icons/fa6';
 
 // import books from '../../data/books';
 
@@ -8,19 +9,24 @@ import { selectBooks } from '../../redux//slices/bookSlices';
 import {
   selectAuthorFilter,
   selectGenreFilter,
+  selectSortingFilter,
   selectTitleFilter,
 } from '../../redux/slices/filterSlices';
 import ComboBox from '../../components/SortSelect';
 
 import styles from './MainBook.module.scss';
+import { sortBooks } from '../../utils/sortProduct';
 
 function BookStore() {
   const books = useSelector(selectBooks);
-  const genre = useSelector(selectGenreFilter);
   const titleFilter = useSelector(selectTitleFilter);
   const authorFilter = useSelector(selectAuthorFilter);
+  const genreFilter = useSelector(selectGenreFilter);
+  const sortingFilter = useSelector(selectSortingFilter);
 
-  const filterBooks = books.filter((book) => {
+  const booksSorting = sortBooks(books, sortingFilter);
+
+  const filterBooks = booksSorting.filter((book) => {
     const matchesTitle = book.title
       .toLowerCase()
       .includes(titleFilter.toLowerCase());
@@ -29,7 +35,8 @@ function BookStore() {
       .toLowerCase()
       .includes(authorFilter.toLowerCase());
 
-    const matchesGenre = genre.length === 0 || genre.includes(book.genre);
+    const matchesGenre =
+      genreFilter.length === 0 || genreFilter.includes(book.genre);
 
     return matchesTitle && matchesAuthor && matchesGenre;
   });
@@ -56,8 +63,17 @@ function BookStore() {
               <Link to={book.slug} className={styles.bookLink}>
                 <img src={book.imgSrc} alt="img" />
               </Link>
+              <div className={styles.cardBookInfo}>
+                <div>
+                  <FaStar />
+                  {book.rating}
+                </div>
+                <span>{book.dateOfEntry}</span>
+              </div>
+
               <Link to={book.slug} className={styles.bookLink}>
-                <span>{book.genreUA}</span>
+                <span>{book.title}</span>
+                <span>{book.author}</span>
               </Link>
             </div>
           ))}

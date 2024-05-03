@@ -4,10 +4,13 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import InputBase from '@mui/material/InputBase';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { selectBooks } from '../redux/slices/bookSlices';
 import { SORT_KEYS } from '../utils/name';
+import {
+  selectSortingFilter,
+  setSortingFilter,
+} from '../redux/slices/filterSlices';
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   '& .MuiInputBase-input': {
@@ -43,12 +46,11 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
 // const SORT_KEYS = ['по популярності', 'по назві', 'по даті'];
 
 export default function CustomizedSelects() {
-  const [sort, setSort] = React.useState('по популярності'); // Початкове значення "по популярності"
-  const books = useSelector(selectBooks);
+  const dispatch = useDispatch();
+  const sortingFilter = useSelector(selectSortingFilter);
 
   const handleChange = (event) => {
-    setSort(event.target.value);
-    // console.log(sort);
+    dispatch(setSortingFilter(event.target.value));
   };
 
   return (
@@ -56,7 +58,7 @@ export default function CustomizedSelects() {
       <Select
         labelId="demo-customized-select-label"
         id="demo-customized-select"
-        value={sort}
+        value={sortingFilter}
         onChange={handleChange}
         input={<BootstrapInput />}
       >

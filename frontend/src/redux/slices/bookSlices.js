@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { sortBooks } from '../../utils/sortProduct';
 
 const initialState = {
   books: [],
@@ -8,11 +9,12 @@ const initialState = {
 
 export const fetchBook = createAsyncThunk(
   'bookStore/fetchBook',
-  async (url, thunkAPI) => {
+  async (url) => {
     try {
       const res = await axios.get(url);
-      // console.log('res:', res);
-      return res.data;
+
+      // console.log(sortBooks(res.data, 'по назві'));
+      return sortBooks(res.data, 'по популярності');
     } catch (error) {
       throw error;
     }
