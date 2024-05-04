@@ -41,14 +41,20 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 5px;
+        cursor: default;
 
         div {
           display: flex;
           flex-direction: row;
           align-items: center;
           gap: 2px;
-          color: white;
-          cursor: default;
+        }
+
+        div,
+        span {
+          &:hover {
+            color: white;
+          }
         }
       }
 
