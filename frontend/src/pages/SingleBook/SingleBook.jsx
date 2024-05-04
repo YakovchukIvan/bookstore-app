@@ -56,7 +56,7 @@ function SingleBook() {
               </div>
               <hr className={styles.hr} />
 
-              <div className={styles.genre}>
+              <div className={styles.genreUA}>
                 <p>
                   <i>Жанр</i>
                 </p>

@@ -62,6 +62,8 @@ function BookStore() {
             <div className={styles.blockListBook} key={book.idBook}>
               <Link to={book.slug} className={styles.bookLink}>
                 <img src={book.imgSrc} alt="img" />
+                {/* <img src="/img/harryPotter/1.jpg" alt="" /> */}
+                {/* <img src="/img/book/4.jpg" alt="" /> */}
               </Link>
               <div className={styles.cardBookInfo}>
                 <div>
