@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import styles from './Book.module.scss';
 import { URL_BOOKS } from '../../redux/API';
+import SwiperGalery from '../../components/Swiper';
 
 function SingleBook() {
   const params = useParams();
@@ -44,7 +45,8 @@ function SingleBook() {
 
           <div className={styles.cardCaption}>
             <div className={styles.bookImage}>
-              <img src={book.imgSrc} alt={book.title} />
+              <SwiperGalery book={book} />
+              {/* <img src={book.imgSrc} alt={book.title} /> */}
             </div>
 
             <div className={styles.bookCaption}>

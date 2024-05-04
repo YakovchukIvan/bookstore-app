@@ -11,15 +11,16 @@ function Footer() {
           <li>Питання та відповіді</li>
         </ul>
 
-        <div>
+        <div className={styles.logoFooter}>
           <img
             width={75}
             src="https://www.svgrepo.com/show/513273/book-opened.svg"
             alt=""
           />
-          <img src="" alt="" />
+          <p>ТВОЯ БІБЛІОТЕКА</p>
         </div>
       </div>
+
       <div className={styles.protect}>
         <p>© 2024 Book Store App. Всі права захищено</p>
       </div>

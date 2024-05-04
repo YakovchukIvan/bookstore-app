@@ -49,7 +49,7 @@ function BookStore() {
         <div className={styles.titleBookStore}>
           <div className={styles.amountBook}>
             <span>
-              Всього книг: <strong>{books.length}</strong>
+              Всього книг: <strong>{filterBooks.length}</strong>
             </span>
           </div>
           <div className={styles.sorting}>
@@ -61,7 +61,7 @@ function BookStore() {
           {filterBooks.map((book) => (
             <div className={styles.blockListBook} key={book.idBook}>
               <Link to={book.slug} className={styles.bookLink}>
-                <img src={book.imgSrc} alt="img" />
+                <img src={book.imgSrc[0] || book.imgSrc} alt="img" />
                 {/* <img src="/img/harryPotter/1.jpg" alt="" /> */}
                 {/* <img src="/img/book/4.jpg" alt="" /> */}
               </Link>

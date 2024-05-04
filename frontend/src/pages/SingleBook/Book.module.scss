@@ -1,5 +1,5 @@
 .bookPages {
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
 
   .backToBookStore {
@@ -36,10 +36,16 @@
       .bookImage {
         // border: 1px solid blue;
         flex: 1;
-        max-width: 400px;
+        max-width: 350px;
+        // height: 650px;
 
         img {
           width: 100%;
+          cursor: pointer;
+
+          &:active {
+            cursor: grab;
+          }
         }
       }
 

@@ -2,7 +2,7 @@
   // border: 1px solid #000;
   max-width: 1280px;
   width: 100%;
-  min-height: 1000px;
+  // min-height: 1000px;
   display: grid;
   grid-template-columns: 25% 75%;
   gap: 20px;
@@ -80,7 +80,7 @@
 
         img {
           width: 100%;
-          height: 250px;
+          height: 275px;
           margin-bottom: 5px;
         }
       }
@@ -161,6 +161,12 @@
     // grid-template-columns: 20% 80%;
     .bookMain {
       grid-template-columns: repeat(4, minmax(100px, 1fr));
+
+      .bookLink {
+        img {
+          height: 225px !important;
+        }
+      }
     }
   }
 }

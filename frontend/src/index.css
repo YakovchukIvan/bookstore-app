@@ -42,31 +42,11 @@ body::-webkit-scrollbar-button {
 }
 
 /* CONTACT PAGES TESTING */
-.pagesSort {
-  /* border: 1px solid #000; */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
+.contact {
+  border: 1px solid red;
+  height: 100%;
+  position: relative;
+  max-width: 600px;
 }
 
-.bookGenre {
-  /* border: 1px solid #000; */
-  height: 60vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 15px;
-}
-
-.bookGenre div {
-  background-color: #17415373;
-  border: 2px solid #395966;
-  border-radius: 6px;
-  padding: 6px;
-}
-
-.bookGenre div > p {
-  margin-bottom: 10px;
-}
 /* CONTACT PAGES TESTING */
