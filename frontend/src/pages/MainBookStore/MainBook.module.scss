@@ -161,21 +161,33 @@
     // grid-template-columns: 20% 80%;
     .bookMain {
       grid-template-columns: repeat(4, minmax(100px, 1fr));
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .wrapperBook {
+    gap: 10px;
+    .bookMain {
+      grid-template-columns: repeat(3, minmax(125px, 1fr));
 
       .bookLink {
         img {
-          height: 225px !important;
+          height: 300px !important;
         }
       }
     }
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 840px) {
   .wrapperBook {
-    gap: 10px;
     .bookMain {
-      grid-template-columns: repeat(3, minmax(125px, 1fr));
+      .bookLink {
+        img {
+          height: 250px !important;
+        }
+      }
     }
   }
 }
