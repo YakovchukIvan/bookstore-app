@@ -5,7 +5,12 @@
     "author": "Гарпер Лі",
     "caption": "Роман, що розгортається в Американському Півдні під час 1930-х років.",
     "year": 1960,
-    "imgSrc": ["/img/book/1.jpg", "/img/book/1.jpg", "/img/book/1.jpg"],
+    "imgSrc": [
+      "/img/book/1.jpg",
+      "/img/book/1.jpg",
+      "/img/book/1.jpg",
+      "/img/book/1.jpg"
+    ],
     "isFavorite": false,
     "genre": "artistic-literature",
     "genreUA": "Художня література",
@@ -20,7 +25,12 @@
     "author": "Джордж Орвелл",
     "caption": "Дистопійний роман, який відбувається в тоталітарному режимі.",
     "year": 1949,
-    "imgSrc": ["/img/book/2.jpg", "/img/book/2.jpg", "/img/book/2.jpg"],
+    "imgSrc": [
+      "/img/book/2.jpg",
+      "/img/book/2.jpg",
+      "/img/book/2.jpg",
+      "/img/book/2.jpg"
+    ],
     "isFavorite": false,
     "genre": "science-fiction",
     "genreUA": "Наукова фантастика",
@@ -57,7 +67,12 @@
     "author": "Річард Бах",
     "caption": "Філософський роман про шлях до духовного просвітлення.",
     "year": 1977,
-    "imgSrc": ["/img/book/4.jpg", "/img/book/4.jpg", "/img/book/4.jpg"],
+    "imgSrc": [
+      "/img/book/4.jpg",
+      "/img/book/4.jpg",
+      "/img/book/4.jpg",
+      "/img/book/4.jpg"
+    ],
     "isFavorite": false,
     "genre": "philosophy",
     "genreUA": "Філософія",
@@ -72,7 +87,12 @@
     "author": "Антуан де Сент-Екзюпері",
     "caption": "Філософська казка про дорослішання і любов.",
     "year": 1943,
-    "imgSrc": ["/img/book/5.jpg", "/img/book/5.jpg", "/img/book/5.jpg"],
+    "imgSrc": [
+      "/img/book/5.jpg",
+      "/img/book/5.jpg",
+      "/img/book/5.jpg",
+      "/img/book/5.jpg"
+    ],
     "isFavorite": false,
     "genre": "philosophy",
     "genreUA": "Філософія",
@@ -87,7 +107,12 @@
     "author": "Лев Толстой",
     "caption": "Епічний роман про Наполеонівські війни та російське суспільство.",
     "year": 1869,
-    "imgSrc": ["/img/book/6.jpg", "/img/book/6.jpg", "/img/book/6.jpg"],
+    "imgSrc": [
+      "/img/book/6.jpg",
+      "/img/book/6.jpg",
+      "/img/book/6.jpg",
+      "/img/book/6.jpg"
+    ],
     "isFavorite": false,
     "genre": "historical-prose",
     "genreUA": "Історична проза",
@@ -102,7 +127,12 @@
     "author": "Сюзен Коллінз",
     "caption": "Дистопійний роман про жорстокі боротьби за виживання.",
     "year": 2008,
-    "imgSrc": ["/img/book/7.jpg", "/img/book/7.jpg", "/img/book/7.jpg"],
+    "imgSrc": [
+      "/img/book/7.jpg",
+      "/img/book/7.jpg",
+      "/img/book/7.jpg",
+      "/img/book/7.jpg"
+    ],
     "isFavorite": false,
     "genre": "science-fiction",
     "genreUA": "Наукова фантастика",
@@ -119,6 +149,8 @@
     "year": 1996,
     "imgSrc": [
       "/img/gameThrones/8.jpg",
+      "/img/gameThrones/game-thrones-map.jpg",
+      "/img/gameThrones/game-thrones-map.jpg",
       "/img/gameThrones/game-thrones-map.jpg"
     ],
     "isFavorite": false,
@@ -135,7 +167,12 @@
     "author": "Олесь Гончар",
     "caption": "Роман, що розповідає про події революції і громадянської війни в Україні 1917-1921 років через призму долі головного героя - Івана Онуфріячука.",
     "year": 1966,
-    "imgSrc": ["/img/book/9.jpg", "/img/book/9.jpg", "/img/book/9.jpg"],
+    "imgSrc": [
+      "/img/book/9.jpg",
+      "/img/book/9.jpg",
+      "/img/book/9.jpg",
+      "/img/book/9.jpg"
+    ],
     "isFavorite": false,
     "genre": "historical-prose",
     "genreUA": "Історична проза",
@@ -150,7 +187,12 @@
     "author": "Патрік Ротфусс",
     "caption": "Епічний фентезі-роман, що розповідає про неймовірні пригоди молодого Квоута, який стає вбивцею короля і відкриває для себе справжню силу слова.",
     "year": 2007,
-    "imgSrc": ["/img/kvout/10.jpg", "/img/kvout/kvout1-info.jpg"],
+    "imgSrc": [
+      "/img/kvout/10.jpg",
+      "/img/kvout/kvout1-info.jpg",
+      "/img/kvout/kvout1-info.jpg",
+      "/img/kvout/kvout1-info.jpg"
+    ],
     "isFavorite": false,
     "genre": "fantasy",
     "genreUA": "Фентезі",
@@ -300,6 +342,7 @@
     "imgSrc": [
       "/img/gameThrones/game-thrones1.jpg",
       "/img/gameThrones/game-thrones1-info.jpg",
+      "/img/gameThrones/game-thrones-map.jpg",
       "/img/gameThrones/game-thrones-map.jpg"
     ],
     "isFavorite": false,
@@ -319,6 +362,7 @@
     "imgSrc": [
       "/img/gameThrones/game-thrones2.jpg",
       "/img/gameThrones/game-thrones2-info.jpg",
+      "/img/gameThrones/game-thrones-map.jpg",
       "/img/gameThrones/game-thrones-map.jpg"
     ],
     "isFavorite": false,
@@ -338,6 +382,7 @@
     "imgSrc": [
       "/img/gameThrones/game-thrones3.jpg",
       "/img/gameThrones/game-thrones3-info.jpg",
+      "/img/gameThrones/game-thrones-map.jpg",
       "/img/gameThrones/game-thrones-map.jpg"
     ],
     "isFavorite": false,
@@ -357,6 +402,7 @@
     "imgSrc": [
       "/img/gameThrones/game-thrones4.jpg",
       "/img/gameThrones/game-thrones4-info.jpg",
+      "/img/gameThrones/game-thrones-map.jpg",
       "/img/gameThrones/game-thrones-map.jpg"
     ],
     "isFavorite": false,
@@ -376,6 +422,7 @@
     "imgSrc": [
       "/img/gameThrones/game-thrones5.jpg",
       "/img/gameThrones/game-thrones5-info.jpg",
+      "/img/gameThrones/game-thrones-map.jpg",
       "/img/gameThrones/game-thrones-map.jpg"
     ],
     "isFavorite": false,
@@ -395,6 +442,7 @@
     "imgSrc": [
       "/img/atlant-rozpravyv-plechi/atlant1.jpg",
       "/img/atlant-rozpravyv-plechi/atlant-all.jpg",
+      "/img/atlant-rozpravyv-plechi/atlant-info.jpg",
       "/img/atlant-rozpravyv-plechi/atlant-info.jpg"
     ],
     "isFavorite": false,
@@ -414,6 +462,7 @@
     "imgSrc": [
       "/img/atlant-rozpravyv-plechi/atlant2.jpg",
       "/img/atlant-rozpravyv-plechi/atlant-all.jpg",
+      "/img/atlant-rozpravyv-plechi/atlant-info.jpg",
       "/img/atlant-rozpravyv-plechi/atlant-info.jpg"
     ],
     "isFavorite": false,
@@ -433,6 +482,7 @@
     "imgSrc": [
       "/img/atlant-rozpravyv-plechi/atlant3.jpg",
       "/img/atlant-rozpravyv-plechi/atlant-all.jpg",
+      "/img/atlant-rozpravyv-plechi/atlant-info.jpg",
       "/img/atlant-rozpravyv-plechi/atlant-info.jpg"
     ],
     "isFavorite": false,
@@ -452,6 +502,7 @@
     "imgSrc": [
       "/img/lord-ring/lord-ring1.jpg",
       "/img/lord-ring/lord-ring1-2.jpg",
+      "/img/lord-ring/lord-ring1-info.jpg",
       "/img/lord-ring/lord-ring1-info.jpg"
     ],
     "isFavorite": false,
@@ -471,7 +522,8 @@
     "imgSrc": [
       "/img/lord-ring/lord-ring2.jpg",
       "/img/lord-ring/lord-ring2-2.jpg",
-      "/img/lord-ring/lord-ring2-info.jpg"
+      "/img/lord-ring/lord-ring2-info.jpg",
+      "/img/lord-ring/lord-ring1-info.jpg"
     ],
     "isFavorite": false,
     "genre": "fantasy",
@@ -490,7 +542,8 @@
     "imgSrc": [
       "/img/lord-ring/lord-ring3.jpg",
       "/img/lord-ring/lord-ring3-2.jpg",
-      "/img/lord-ring/lord-ring3-info.jpg"
+      "/img/lord-ring/lord-ring3-info.jpg",
+      "/img/lord-ring/lord-ring1-info.jpg"
     ],
     "isFavorite": false,
     "genre": "fantasy",
@@ -506,7 +559,12 @@
     "author": "Патрік Ротфусс",
     "caption": "Перша частина епічної трилогії 'Хроніка Короля-мисливця', яка розповідає історію Квота Квіота.",
     "year": 2007,
-    "imgSrc": ["/img/kvout/kvout2.jpg", "/img/kvout/kvout2-info.jpg"],
+    "imgSrc": [
+      "/img/kvout/kvout2.jpg",
+      "/img/kvout/kvout2-info.jpg",
+      "/img/kvout/kvout2-info.jpg",
+      "/img/kvout/kvout2-info.jpg"
+    ],
     "isFavorite": false,
     "genre": "fantasy",
     "genreUA": "Фентезі",
@@ -543,6 +601,8 @@
     "year": 1966,
     "imgSrc": [
       "/img/erik-bern/Intro-to-psychoanalysis1.jpg",
+      "/img/erik-bern/Intro-to-psychoanalysis2.jpg",
+      "/img/erik-bern/Intro-to-psychoanalysis2.jpg",
       "/img/erik-bern/Intro-to-psychoanalysis2.jpg"
     ],
     "isFavorite": false,

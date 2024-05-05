@@ -7,7 +7,9 @@ const app = express();
 app.use(cors());
 
 app.get('/books', (req, res) => {
-  res.json(booksData);
+  setTimeout(() => {
+    res.json(booksData);
+  }, 2000);
 });
 
 // Реалізація пошуку книги по slug

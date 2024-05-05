@@ -15,7 +15,6 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
 export default function SwiperGalery({ book }) {
   const bookImg = book.imgSrc;
-  console.log(' imgSrc:', bookImg.length);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
@@ -42,7 +41,7 @@ export default function SwiperGalery({ book }) {
         onSwiper={setThumbsSwiper}
         loop={true}
         spaceBetween={10}
-        slidesPerView={bookImg.length}
+        slidesPerView={3}
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}

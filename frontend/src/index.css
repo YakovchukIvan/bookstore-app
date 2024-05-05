@@ -43,7 +43,6 @@ body::-webkit-scrollbar-button {
 
 /* CONTACT PAGES TESTING */
 .contact {
-  border: 1px solid red;
   height: 100%;
   position: relative;
   max-width: 600px;
