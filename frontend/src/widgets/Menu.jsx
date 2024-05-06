@@ -18,7 +18,7 @@ function Menu() {
         >
           Головна
         </NavLink>
-        <NavLink to="/courses">Книгі</NavLink>
+        <NavLink to="/books">Книгі</NavLink>
         <NavLink to="/about">Про нас</NavLink>
         <NavLink to="/contacts">Контакти</NavLink>
       </nav>

@@ -1,12 +1,14 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { Pagination } from '@mui/material';
 import { selectBooks } from '../../redux/slices/bookSlices';
+import { setPaginationBooks } from '../../redux/slices/paginationSlices';
 
 function PaginationBooks() {
+  const dispatch = useDispatch();
+
   const booksData = useSelector(selectBooks);
 
-  const [books, setBooks] = useState([]);
   const [page, setPage] = useState(1);
   const [pageQty, setPageQty] = useState(0);
 
@@ -21,9 +23,8 @@ function PaginationBooks() {
       const pageBooks = booksData.slice(startIndex, endIndex);
       pages.push(pageBooks);
     }
-    console.log(books);
     setPageQty(totalPages);
-    setBooks(pages[page - 1]);
+    dispatch(setPaginationBooks(booksData));
   }, [booksData, page]);
 
   return (

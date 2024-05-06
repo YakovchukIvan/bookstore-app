@@ -17,8 +17,8 @@ function App() {
           <Route path="/" element={<MainLayouts />}>
             {/* <div className="container"> */}
             <Route index element={<Home />}></Route>
-            <Route path="courses" element={<BookStore />}></Route>
-            <Route path="courses/:slug" element={<SingleCourse />}></Route>
+            <Route path="books" element={<BookStore />}></Route>
+            <Route path="books/:slug" element={<SingleCourse />}></Route>
             <Route path="about" element={<About />}></Route>
             <Route exact path="contacts" element={<Contacts />}></Route>
             <Route path="*" element={<NotFound />}></Route>
