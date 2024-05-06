@@ -6,11 +6,11 @@ import Select from '@mui/material/Select';
 import InputBase from '@mui/material/InputBase';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { SORT_KEYS } from '../utils/name';
+import { SORT_KEYS } from '../../utils/name';
 import {
   selectSortingFilter,
   setSortingFilter,
-} from '../redux/slices/filterSlices';
+} from '../../redux/slices/filterSlices';
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   '& .MuiInputBase-input': {

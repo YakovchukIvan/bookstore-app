@@ -9,7 +9,7 @@ app.use(cors());
 app.get('/books', (req, res) => {
   setTimeout(() => {
     res.json(booksData);
-  }, 2000);
+  }, 1000);
 });
 
 // Реалізація пошуку книги по slug

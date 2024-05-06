@@ -12,10 +12,11 @@ import {
   selectSortingFilter,
   selectTitleFilter,
 } from '../../redux/slices/filterSlices';
-import ComboBox from '../../components/SortSelect';
+import ComboBox from '../../components/sorting/SortSelect';
 
 import styles from './MainBook.module.scss';
 import { sortBooks } from '../../utils/sortProduct';
+import PaginationBooks from '../../components/pagination/PaginationBooks';
 
 function BookStore() {
   const books = useSelector(selectBooks);
@@ -52,6 +53,11 @@ function BookStore() {
               Всього книг: <strong>{filterBooks.length}</strong>
             </span>
           </div>
+
+          <div>
+            <PaginationBooks />
+          </div>
+
           <div className={styles.sorting}>
             <ComboBox />
           </div>

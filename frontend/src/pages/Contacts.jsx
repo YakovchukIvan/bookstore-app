@@ -32,25 +32,32 @@ function Contacts() {
     <div className="contact">
       <h2>Contact</h2>
       <>
-        <Stack spacing={2}>
-          {!!pageQty && (
-            <Pagination
-              count={pageQty}
-              page={page}
-              onChange={(_, num) => setPage(num)}
-              showFirstButton
-              showLastButton
-              sx={{ marginY: 3, marginX: 'auto' }}
-            />
-          )}
-          {books
+        {/* <Stack spacing={2}> */}
+        {!!pageQty && (
+          <Pagination
+            count={pageQty}
+            page={page}
+            onChange={(_, num) => setPage(num)}
+            showFirstButton
+            showLastButton
+            sx={{
+              // marginY: 3,
+              // marginX: 'auto',
+
+              '& .MuiPaginationItem-text': {
+                color: 'white', // Зміна кольору тексту елементів
+              },
+            }}
+          />
+        )}
+        {/* {books
             ? books.map((book) => (
                 <Link key={book.idBook} to={`/courses/${book.slug}`}>
                   {book.title}
                 </Link>
               ))
-            : 'Loading'}
-        </Stack>
+            : 'Loading'} */}
+        {/* </Stack> */}
       </>
     </div>
   );

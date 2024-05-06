@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import styles from './Book.module.scss';
 import { URL_BOOKS } from '../../redux/API';
-import SwiperGalery from '../../components/Swiper';
+import SwiperGalery from '../../components/swiper/Swiper';
 
 function SingleBook() {
   const params = useParams();
@@ -58,11 +58,11 @@ function SingleBook() {
               </div>
               <hr className={styles.hr} />
 
-              <div className={styles.genreUA}>
+              <div className={styles.genre}>
                 <p>
                   <i>Жанр</i>
                 </p>
-                <p>{book.genre}</p>
+                <p>{book.genreUA}</p>
               </div>
               <hr className={styles.hr} />
 
