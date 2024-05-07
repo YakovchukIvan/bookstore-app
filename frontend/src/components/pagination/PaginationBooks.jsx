@@ -41,7 +41,7 @@ function PaginationBooks() {
             // marginX: 'auto',
 
             '& .MuiPaginationItem-text': {
-              color: 'white', // Зміна кольору тексту елементів
+              color: 'white', // Зміна кольору тексту елементів !
             },
           }}
         />
