@@ -5,6 +5,7 @@ const initialState = {
   author: '',
   genre: [],
   sorting: 'по популярності',
+  pagePagination: 1,
 };
 
 const filterSlice = createSlice({
@@ -12,15 +13,24 @@ const filterSlice = createSlice({
   initialState,
   reducers: {
     setTitleFilter: (state, action) => {
-      return { ...state, title: action.payload };
+      return {
+        ...state,
+        title: action.payload,
+        pagePagination: action.payload,
+      };
     },
     setAuthorFilter: (state, action) => {
-      return { ...state, author: action.payload };
+      return {
+        ...state,
+        author: action.payload,
+        pagePagination: action.payload,
+      };
     },
     setGenreFilter: (state, action) => {
       return {
         ...state,
         genre: [...state.genre, action.payload], // Додаємо нове значення до масиву
+        pagePagination: action.payload,
       };
     },
     setDeleteGenreFilter: (state, action) => {
@@ -51,5 +61,6 @@ export const selectTitleFilter = (state) => state.filter.title;
 export const selectAuthorFilter = (state) => state.filter.author;
 export const selectGenreFilter = (state) => state.filter.genre;
 export const selectSortingFilter = (state) => state.filter.sorting;
+export const selectPageFilter = (state) => state.filter.pagePagination;
 
 export default filterSlice.reducer;

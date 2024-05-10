@@ -17,7 +17,9 @@ app.get('/books/:slug', (req, res) => {
   const { slug } = req.params;
   const book = booksData.find((book) => book.slug === slug);
   if (book) {
-    res.json(book);
+    setTimeout(() => {
+      res.json(book);
+    }, 1000);
   } else {
     res.status(404).json({ message: 'Book not found' });
   }

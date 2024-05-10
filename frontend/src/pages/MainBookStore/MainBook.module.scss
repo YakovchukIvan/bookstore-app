@@ -16,6 +16,13 @@
     font-size: clamp(0.875rem, 0.725rem + 0.75vw, 1.625rem);
     font-weight: 500;
     margin: 0px 5px 15px 0;
+
+    .amountBook {
+      background: rgba(175, 175, 175, 0.1);
+      border: 1px solid #35525f11;
+      border-radius: 4px;
+      padding: 4px 8px;
+    }
   }
 
   .bookMain {
@@ -104,13 +111,17 @@
   padding: 5px 15px 15px;
 
   .resetBtn {
+    background-color: initial;
     position: absolute;
     top: 5px;
     right: 5px;
-    width: 80px;
-    font-size: 12px;
+    height: 30px;
     padding: 4px;
     margin: 0;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
   }
 
   div {

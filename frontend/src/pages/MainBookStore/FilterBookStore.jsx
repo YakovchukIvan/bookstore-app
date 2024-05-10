@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { FaRegCircleXmark } from 'react-icons/fa6';
+
 import {
   selectAuthorFilter,
   selectTitleFilter,
@@ -85,8 +87,9 @@ function FilterBookStore() {
         type="button"
         onClick={handleResetFilters}
       >
-        Очистити фільтр
+        <FaRegCircleXmark title="Очистка фільтру" />
       </button>
+
       <h2>Фільтр</h2>
 
       <div className={styles.searchTitle}>

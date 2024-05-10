@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { FaStar } from 'react-icons/fa6';
 
-// import books from '../../data/books ';
-
 import FilterBookStore from './FilterBookStore';
 import { selectBooks } from '../../redux//slices/bookSlices';
 import {
   selectAuthorFilter,
   selectGenreFilter,
+  selectPageFilter,
   selectSortingFilter,
   selectTitleFilter,
 } from '../../redux/slices/filterSlices';
@@ -31,6 +30,7 @@ function BookStore() {
   const [booksPagination, setBooksPagination] = useState([]);
   const [page, setPage] = useState(1);
   const [pageQty, setPageQty] = useState(0);
+  const [booksQty, setBooksQty] = useState(0);
 
   const booksSorting = sortBooks(books, sortingFilter);
 
@@ -54,8 +54,9 @@ function BookStore() {
     const totalPages = Math.ceil(filterBooks.length / bookPages);
     setPageQty(totalPages);
 
-    const pages = paginationBooks(filterBooks);
+    setBooksQty(filterBooks.length);
 
+    const pages = paginationBooks(filterBooks);
     setBooksPagination(pages[page - 1]);
   }, [books, titleFilter, authorFilter, genreFilter, sortingFilter, page]);
 
@@ -67,11 +68,11 @@ function BookStore() {
         <div className={styles.titleBookStore}>
           <div className={styles.amountBook}>
             <span>
-              Всього книг: <strong>{books.length}</strong>
+              Всього книг: <strong>{booksQty}</strong>
             </span>
           </div>
 
-          <div>
+          <div className={styles.pagination}>
             <PaginationBooks
               page={page}
               setPage={setPage}
