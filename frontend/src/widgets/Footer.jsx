@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.scss';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -12,12 +13,14 @@ function Footer() {
         </ul>
 
         <div className={styles.logoFooter}>
-          <img
-            width={75}
-            src="https://www.svgrepo.com/show/513273/book-opened.svg"
-            alt=""
-          />
-          <p>ТВОЯ БІБЛІОТЕКА</p>
+          <Link to="/books">
+            <img
+              width={75}
+              src="https://www.svgrepo.com/show/513273/book-opened.svg"
+              alt=""
+            />
+            <span>ТВОЯ БІБЛІОТЕКА</span>
+          </Link>
         </div>
       </div>
 

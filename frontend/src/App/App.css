@@ -105,9 +105,3 @@ button:active {
   background-color: #6f6dec;
   border: 1px solid #6f6dec !important;
 }
-
-.home {
-  border: 1px solid #000;
-  width: 100%;
-  height: 80vh;
-}

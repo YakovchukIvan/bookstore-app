@@ -29,7 +29,17 @@
     }
 
     .logoFooter {
-      text-align: center;
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        font-size: 16px;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
     }
   }
 

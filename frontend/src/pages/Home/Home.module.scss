@@ -1,0 +1,32 @@
+.home {
+  /* border: 1px solid #000; */
+  max-width: 1280px;
+  width: 100%;
+
+  h1 {
+    opacity: 0.8;
+  }
+
+  div {
+    margin-top: 20px;
+    img {
+      width: 100%;
+      border-radius: 6px;
+    }
+  }
+
+  p {
+    border: 1px dashed #918d8d83;
+    border-radius: 6px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    font-size: clamp(0.875rem, 0.75rem + 0.63vw, 1.25rem);
+    padding: 10px;
+    margin: 20px 0;
+  }
+
+  a {
+    &:hover {
+      color: rgb(65, 112, 126);
+    }
+  }
+}
