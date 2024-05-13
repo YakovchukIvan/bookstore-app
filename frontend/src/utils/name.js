@@ -2,7 +2,7 @@ export const SORT_KEYS = ['по популярності', 'по назві', '�
 
 export const BOOK_PER_PAGES = 6;
 
-export const technologyStack = [
+export const TECHNOLOGY_STACK = [
   {
     title: 'HTML',
     srcImg: '/img/about/html.png',
