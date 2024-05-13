@@ -25,12 +25,6 @@ app.get('/books/:slug', (req, res) => {
   }
 });
 
-// app.get('/random-book-delayed', (req, res) => {
-//   setTimeout(() => {
-//     res.json(booksData);
-//   }, 2000);
-// });
-
 const port = process.env.PORT || 4095;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
