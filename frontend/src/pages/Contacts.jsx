@@ -30,7 +30,7 @@ function Contacts() {
 
   return (
     <div className="contact">
-      <h2>Contact</h2>
+      <h2>Поки що тестова сторінка</h2>
       <>
         <Stack spacing={2}>
           {!!pageQty && (

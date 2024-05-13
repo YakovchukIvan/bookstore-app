@@ -10,7 +10,7 @@ function About() {
       <div className={styles.stackBlock}>
         {TECHNOLOGY_STACK.map((item) => (
           <div className={styles.stackItem} key={item}>
-            <Link to={item.link}>
+            <Link to={item.link} target="_blank" rel="noopener noreferrer">
               <p>{item.title}</p>
               <div className={styles.stackImg}>
                 <img src={item.srcImg} alt="" />
