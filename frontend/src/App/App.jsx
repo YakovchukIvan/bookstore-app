@@ -6,8 +6,8 @@ import Home from '../pages/Home/Home';
 import BookStore from '../pages/MainBookStore/BookStore';
 import SingleCourse from '../pages/SingleBook/SingleBook';
 import About from '../pages/About/About';
-import Contacts from '../pages/Contacts';
 import NotFound from '../pages/NotFound';
+import Contacts from '../pages/Contacts';
 
 function App() {
   return (
