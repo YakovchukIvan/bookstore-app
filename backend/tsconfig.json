@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    // Версія JavaScript, яку генерує TypeScript
+    "target": "ES2020",
+
+    // Система модулів
+    "module": "commonjs",
+
+    // Бібліотеки, які включаються
+    "lib": ["ES2020"],
+
+    // Папка для скомпільованих файлів
+    "outDir": "./dist",
+
+    // Папка з вихідними файлами
+    "rootDir": "./src",
+
+    // Строга перевірка типів
+    "strict": true,
+
+    // Дозволити import/export між CommonJS та ES модулями
+    "esModuleInterop": true,
+
+    // Пропустити перевірку типів у бібліотеках
+    "skipLibCheck": true,
+
+    // Вимагати однакового регістру в іменах файлів
+    "forceConsistentCasingInFileNames": true,
+
+    // Дозволити імпорт JSON файлів (ВАЖЛИВО для роботи з books.json)
+    "resolveJsonModule": true,
+
+    // Генерувати source maps для debugging
+    "sourceMap": true,
+
+    // Дозволити синтетичні default imports
+    "allowSyntheticDefaultImports": true
+  },
+
+  // Файли, які включаються в компіляцію
+  "include": ["src/**/*"],
+
+  // Файли, які виключаються з компіляції
+  "exclude": ["node_modules", "dist"]
+}
