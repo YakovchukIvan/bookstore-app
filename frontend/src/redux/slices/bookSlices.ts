@@ -9,19 +9,16 @@ const initialState = {
   isLoading: false,
 };
 
-export const fetchBook = createAsyncThunk(
-  'bookStore/fetchBook',
-  async (url) => {
-    try {
-      const res = await axios.get(url);
+export const fetchBook = createAsyncThunk('bookStore/fetchBook', async (url) => {
+  try {
+    const res = await axios.get(url);
 
-      // console.log(sortBooks(res.data, 'по назві'));
-      return sortBooks(res.data, 'по популярності');
-    } catch (error) {
-      throw error;
-    }
+    // console.log(sortBooks(res.data, 'по назві'));
+    return sortBooks(res.data, 'по популярності');
+  } catch (error) {
+    throw error;
   }
-);
+});
 
 const booksSlice = createSlice({
   name: 'bookStore',
@@ -35,10 +32,10 @@ const booksSlice = createSlice({
       .addCase(fetchBook.fulfilled, (state, action) => {
         state.books = action.payload;
         state.booksPagination = paginationBooks(action.payload);
-        state.isLoading = false; // Оновіть isLoading на false після успішного завершення
+        state.isLoading = false; // Оновить isLoading на false після успішного завершення
       })
       .addCase(fetchBook.rejected, (state) => {
-        state.isLoading = false; // Оновіть isLoading на false у разі помилки
+        state.isLoading = false; // Оновить isLoading на false у разі помилки
       });
   },
 });

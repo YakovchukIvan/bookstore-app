@@ -20,7 +20,7 @@ function App() {
             <Route path="books" element={<BookStore />}></Route>
             <Route path="books/:slug" element={<SingleCourse />}></Route>
             <Route path="about" element={<About />}></Route>
-            <Route exact path="contacts" element={<Contacts />}></Route>
+            <Route path="contacts" element={<Contacts />}></Route>
             <Route path="*" element={<NotFound />}></Route>
             {/* </div> */}
           </Route>
