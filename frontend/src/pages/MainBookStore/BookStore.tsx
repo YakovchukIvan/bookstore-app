@@ -53,7 +53,11 @@ function BookStore() {
 
     const pages = paginationBooks(filterBooks);
     setBooksPagination(pages[page - 1] || []);
-  }, [books, titleFilter, authorFilter, genreFilter, sortingFilter, page, booksSorting]);
+  }, [books, titleFilter, authorFilter, genreFilter, sortingFilter, page]);
+
+  useEffect(() => {
+    setPage(1); // Скидаємо на першу сторінку при зміні фільтрів
+  }, [titleFilter, authorFilter, genreFilter]);
 
   return (
     <div className={styles.wrapperBook}>

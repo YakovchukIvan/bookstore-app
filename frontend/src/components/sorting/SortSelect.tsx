@@ -43,7 +43,7 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
 const menuStyles = {
   PaperProps: {
     sx: {
-      backgroundColor: '#2f4e5c',
+      backgroundColor: '#3d4161',
       marginY: '10px',
       color: 'white',
       '& .MuiMenuItem-root': {
