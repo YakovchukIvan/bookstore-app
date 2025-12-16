@@ -100,7 +100,7 @@ src/
  ┣ API/            # Axios та API виклики
  ┣ components/     # Універсальні UI-компоненти
  ┣ data/           # Мокові данні
- ┣ pages/          # Сторінки (Home, BookDetail, Cart)
+ ┣ pages/          # Сторінки (Home, Books, BookDetail)
  ┣ redux/          # Redux slice-и
  ┣ utils/          # Функції
  ┣ App.tsx
