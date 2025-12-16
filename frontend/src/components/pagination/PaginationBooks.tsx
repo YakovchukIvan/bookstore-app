@@ -1,16 +1,24 @@
-import { Pagination } from '@mui/material';
-import { useEffect, useState } from 'react';
-import { selectPageFilter } from '../../redux/slices/filterSlices';
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { Pagination } from '@mui/material';
 
-function PaginationBooks({ page, setPage, pageQty }) {
+import { selectPageFilter } from '@/redux/slices';
+
+interface PaginationBooksProps {
+  page: number;
+  setPage: (page: number) => void;
+  pageQty: number;
+  setPageQty?: (pageQty: number) => void;
+}
+
+function PaginationBooks({ page, setPage, pageQty }: PaginationBooksProps) {
   const isFilterActive = useSelector(selectPageFilter);
 
   useEffect(() => {
     if (isFilterActive) {
       setPage(1);
     }
-  }, [isFilterActive]);
+  }, [isFilterActive, setPage]);
 
   return (
     <>
@@ -18,7 +26,7 @@ function PaginationBooks({ page, setPage, pageQty }) {
         <Pagination
           count={pageQty}
           page={page}
-          onChange={(_, num) => setPage(num)}
+          onChange={(_, num: number) => setPage(num)}
           // showFirstButton
           // showLastButton
           sx={{

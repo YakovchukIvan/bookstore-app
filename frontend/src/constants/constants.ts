@@ -1,8 +1,10 @@
-export const SORT_KEYS = ['по популярності', 'по назві', 'по даті'];
+import { SortKey, TechnologyStackItem } from '@/types/types';
 
-export const BOOK_PER_PAGES = 6;
+export const SORT_KEYS: readonly SortKey[] = ['по популярності', 'по назві', 'по даті'] as const;
 
-export const TECHNOLOGY_STACK = [
+export const BOOK_PER_PAGES: number = 6;
+
+export const TECHNOLOGY_STACK: readonly TechnologyStackItem[] = [
   {
     title: 'HTML',
     srcImg: '/img/about/html.png',
@@ -53,4 +55,4 @@ export const TECHNOLOGY_STACK = [
     srcImg: '/img/about/express.png',
     link: 'https://code.tutsplus.com/uk/code-your-first-api-with-nodejs-and-express-set-up-the-server--cms-31698t',
   },
-];
+] as const;

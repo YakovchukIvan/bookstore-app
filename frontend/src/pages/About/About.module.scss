@@ -7,7 +7,6 @@
   }
 
   .stackBlock {
-    // border: 1px solid red;
     max-width: 850px;
     display: flex;
     flex-wrap: wrap;
@@ -17,7 +16,6 @@
 
     .stackItem {
       p {
-        // color: white;
         &:hover {
           color: rgb(27, 95, 116);
         }
@@ -25,7 +23,6 @@
 
       .stackImg {
         display: block;
-        // border: 1px solid #000;
         border-radius: 6px;
         width: 250px;
         height: 250px;

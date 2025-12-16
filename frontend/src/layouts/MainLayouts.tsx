@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom';
-import Menu from '../widgets/Menu';
 
 import styles from './Main.Layouts.module.scss';
-import Footer from '../widgets/Footer';
+import Menu from '@/widgets/Menu';
+import Footer from '@/widgets/Footer';
 
 function MainLayouts() {
   return (

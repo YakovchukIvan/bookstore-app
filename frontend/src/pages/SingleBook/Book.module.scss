@@ -13,12 +13,10 @@
   }
 
   .cardBook {
-    // display: grid;
-    // grid-template-columns: 45% 55%; /* Лівий блок - 30%, правий блок - 70% */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px; /* Проміжок між блоками */
+    gap: 20px;
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.1);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -31,13 +29,10 @@
     .cardCaption {
       display: flex;
       gap: 20px;
-      // border: 1px solid red;
 
       .bookImage {
-        // border: 1px solid blue;
         flex: 1;
         max-width: 350px;
-        // height: 650px;
 
         img {
           width: 100%;
@@ -50,7 +45,6 @@
       }
 
       .bookCaption {
-        // border: 1px solid blue;
         flex: 1;
         display: flex;
         flex-direction: column;

@@ -1,16 +1,13 @@
-import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 import InputBase from '@mui/material/InputBase';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { SORT_KEYS } from '../../utils/name';
-import {
-  selectSortingFilter,
-  setSortingFilter,
-} from '../../redux/slices/filterSlices';
+import { selectSortingFilter, setSortingFilter } from '../../redux/slices/filterSlices';
+import { SortKey } from '@/types/types';
+import { SORT_KEYS } from '@/constants/constants';
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   '& .MuiInputBase-input': {
@@ -43,14 +40,26 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-// const SORT_KEYS = ['по популярності', 'по назві', 'по даті'];
+const menuStyles = {
+  PaperProps: {
+    sx: {
+      backgroundColor: '#2f4e5c',
+      marginY: '10px',
+      color: 'white',
+      '& .MuiMenuItem-root': {
+        fontSize: 16,
+        fontFamily: '"Segoe UI"',
+      },
+    },
+  },
+};
 
 export default function CustomizedSelects() {
   const dispatch = useDispatch();
   const sortingFilter = useSelector(selectSortingFilter);
 
-  const handleChange = (event) => {
-    dispatch(setSortingFilter(event.target.value));
+  const handleChange = (event: SelectChangeEvent<string>): void => {
+    dispatch(setSortingFilter(event.target.value as SortKey));
   };
 
   return (
@@ -61,15 +70,13 @@ export default function CustomizedSelects() {
         value={sortingFilter}
         onChange={handleChange}
         input={<BootstrapInput />}
+        MenuProps={menuStyles}
       >
         {SORT_KEYS.map((item) => (
           <MenuItem value={item} key={item}>
             {item}
           </MenuItem>
         ))}
-        {/* <MenuItem value={'по популярності'}>по популярності</MenuItem> */}
-        {/* <MenuItem value={'по назві'}>по назві</MenuItem>
-        <MenuItem value={'по даті'}>по даті</MenuItem> */}
       </Select>
     </FormControl>
   );

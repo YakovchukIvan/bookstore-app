@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Footer.module.scss';
 import { Link } from 'react-router-dom';
 
@@ -14,11 +13,7 @@ function Footer() {
 
         <div className={styles.logoFooter}>
           <Link to="/books">
-            <img
-              width={75}
-              src="https://www.svgrepo.com/show/513273/book-opened.svg"
-              alt=""
-            />
+            <img width={75} src="https://www.svgrepo.com/show/513273/book-opened.svg" alt="" />
             <span>ТВОЯ БІБЛІОТЕКА</span>
           </Link>
         </div>

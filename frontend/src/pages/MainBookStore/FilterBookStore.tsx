@@ -16,9 +16,23 @@ import {
 import { selectBooks } from '../../redux/slices/bookSlices';
 
 import styles from './MainBook.module.scss';
+import { Book } from '@/types/types';
 
-const genreBooks = (books) => {
-  const genreMap = {};
+interface GenreItem {
+  genre: string;
+  genreUA: string;
+}
+
+interface GenreMap {
+  [key: string]: {
+    genre: string;
+    genreUA: string;
+    books: Book[];
+  };
+}
+
+const genreBooks = (books: Book[]): GenreItem[] => {
+  const genreMap: GenreMap = {};
 
   books.forEach((book) => {
     const { genre, genreUA } = book;
@@ -49,19 +63,17 @@ function FilterBookStore() {
   const titleFilter = useSelector(selectTitleFilter);
   const authorFilter = useSelector(selectAuthorFilter);
 
-  const [selectedGenres, setSelectedGenres] = useState(currentGenre);
+  const [selectedGenres, setSelectedGenres] = useState<string[]>(currentGenre);
 
-  const handleTitleFilterChange = (e) => {
+  const handleTitleFilterChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     dispatch(setTitleFilter(e.target.value));
   };
 
-  const handleAuthorFilterChange = (e) => {
+  const handleAuthorFilterChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     dispatch(setAuthorFilter(e.target.value));
   };
 
-  // Функція для додавання або видалення жанру зі списку вибраних
-  const handleGenreChange = (genre) => {
-    // Оновлення списку обраних жанрів
+  const handleGenreChange = (genre: string): void => {
     if (selectedGenres.includes(genre)) {
       dispatch(setDeleteGenreFilter(genre));
 
@@ -73,7 +85,7 @@ function FilterBookStore() {
     }
   };
 
-  const handleResetFilters = () => {
+  const handleResetFilters = (): void => {
     dispatch(resetFilters());
     setSelectedGenres([]);
   };
@@ -82,11 +94,7 @@ function FilterBookStore() {
 
   return (
     <div className={styles.filterBook}>
-      <button
-        className={styles.resetBtn}
-        type="button"
-        onClick={handleResetFilters}
-      >
+      <button className={styles.resetBtn} type="button" onClick={handleResetFilters}>
         <FaRegCircleXmark title="Очистка фільтру" />
       </button>
 
@@ -94,32 +102,19 @@ function FilterBookStore() {
 
       <div className={styles.searchTitle}>
         <label htmlFor="title">Пошук по назві: </label>
-        <input
-          type="text"
-          id="title"
-          value={titleFilter}
-          onChange={handleTitleFilterChange}
-        />
+        <input type="text" id="title" value={titleFilter} onChange={handleTitleFilterChange} />
       </div>
 
       <div className={styles.searchAuthor}>
         <label htmlFor="author">Пошук по автору: </label>
-        <input
-          type="text"
-          id="author"
-          value={authorFilter}
-          onChange={handleAuthorFilterChange}
-        />
+        <input type="text" id="author" value={authorFilter} onChange={handleAuthorFilterChange} />
       </div>
 
       <div className={styles.searchGenre}>
         <p>Пошук по жанру: </p>
         {genresBooks.map(({ genre, genreUA }, index) => (
-          <div key={genreUA + index}>
-            <label
-              htmlFor={`checkbox-${genre}`}
-              className={`checkbox-${genre}`}
-            >
+          <div key={`${genreUA}-${index}`}>
+            <label htmlFor={`checkbox-${genre}`} className={`checkbox-${genre}`}>
               <input
                 id={`checkbox-${genre}`}
                 type="checkbox"
@@ -130,9 +125,6 @@ function FilterBookStore() {
             </label>
           </div>
         ))}
-        {/* <button onClick={handleSortByGenres}>
-          Сортувати за обраними жанрами
-        </button> */}
       </div>
     </div>
   );

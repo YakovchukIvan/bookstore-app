@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
-import { TECHNOLOGY_STACK } from '../../utils/name';
 import styles from './About.module.scss';
+import { TECHNOLOGY_STACK } from '@/constants/constants';
 
 function About() {
   return (
@@ -9,7 +9,7 @@ function About() {
       <h1>Особистий проект, з використанням таких технологій :</h1>
       <div className={styles.stackBlock}>
         {TECHNOLOGY_STACK.map((item) => (
-          <div className={styles.stackItem} key={item}>
+          <div className={styles.stackItem} key={item.title}>
             <Link to={item.link} target="_blank" rel="noopener noreferrer">
               <p>{item.title}</p>
               <div className={styles.stackImg}>
