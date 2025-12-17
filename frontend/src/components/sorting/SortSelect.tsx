@@ -54,7 +54,7 @@ const menuStyles = {
   },
 };
 
-export default function CustomizedSelects() {
+const CustomizedSelects = () => {
   const dispatch = useDispatch();
   const sortingFilter = useSelector(selectSortingFilter);
 
@@ -80,4 +80,5 @@ export default function CustomizedSelects() {
       </Select>
     </FormControl>
   );
-}
+};
+export default CustomizedSelects;

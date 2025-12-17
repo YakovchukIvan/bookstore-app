@@ -1,0 +1,193 @@
+.wrapperBook {
+  max-width: 1080px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  gap: 20px;
+  margin-right: 10px;
+
+  .titleBookStore {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: clamp(0.875rem, 0.725rem + 0.75vw, 1.625rem);
+    font-weight: 500;
+    margin: 0px 5px 15px 0;
+
+    .amountBook {
+      background: rgba(175, 175, 175, 0.1);
+      border: 1px solid #35525f11;
+      border-radius: 4px;
+      padding: 4px 8px;
+    }
+  }
+
+  .bookMain {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(175px, 1fr));
+    gap: 10px 10px;
+    justify-content: flex-start;
+    margin-right: 5px;
+
+    .blockListBook {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      background-color: #aa89cf41;
+      border: 2px solid #aa89cf;
+      border-radius: 6px;
+      color: rgba(255, 255, 255, 0.767);
+      padding: 10px;
+
+      .cardBookInfo {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        cursor: default;
+
+        div {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 2px;
+        }
+
+        div,
+        span {
+          &:hover {
+            color: white;
+          }
+        }
+      }
+
+      .bookLink {
+        width: 100%;
+        text-align: center;
+        font-size: clamp(0.75rem, 0.568rem + 0.91vw, 1.25rem);
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.705);
+
+        display: flex;
+        flex-direction: column;
+
+        span {
+          white-space: nowrap; /* Запобігає переносу тексту */
+          overflow: hidden; /* Приховує будь-який вміст, який виходить за межі блоку */
+          text-overflow: ellipsis; /* Додає "..." в кінці тексту, який виходить за межі блоку */
+        }
+
+        &:hover {
+          color: white;
+        }
+
+        img {
+          width: 100%;
+          height: 300px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+
+.filterBook {
+  height: 870px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  padding: 5px 15px 15px;
+
+  .resetBtn {
+    background-color: initial;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 30px;
+    padding: 4px;
+    margin: 0;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      max-width: 100%;
+      border-radius: 6px;
+      outline: none;
+      border: none;
+      font-size: 18px;
+      padding: 8px;
+      margin-top: 8px;
+      color: black;
+    }
+  }
+
+  .searchGenre {
+    p {
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: flex;
+      margin-bottom: 5px;
+      max-width: fit-content;
+      cursor: pointer;
+
+      &:hover {
+        color: rgb(197, 170, 227);
+      }
+
+      input {
+        margin: 2px 5px 0 0;
+        cursor: pointer;
+
+        &:checked {
+          background-color: #aa89cf;
+          border-color: #aa89cf;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .wrapperBook {
+    gap: 10px;
+    .bookMain {
+      grid-template-columns: repeat(3, minmax(125px, 1fr));
+
+      .bookLink {
+        img {
+          height: 300px !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 840px) {
+  .wrapperBook {
+    .bookMain {
+      .bookLink {
+        img {
+          height: 250px !important;
+        }
+      }
+    }
+  }
+}

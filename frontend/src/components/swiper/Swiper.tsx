@@ -16,7 +16,7 @@ interface SwiperGalleryProps {
   book: BookDetails;
 }
 
-export default function SwiperGalery({ book }: SwiperGalleryProps) {
+const SwiperGalery = ({ book }: SwiperGalleryProps) => {
   const { imgSrc, title } = book;
 
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
@@ -62,4 +62,6 @@ export default function SwiperGalery({ book }: SwiperGalleryProps) {
       </Swiper>
     </>
   );
-}
+};
+
+export default SwiperGalery;

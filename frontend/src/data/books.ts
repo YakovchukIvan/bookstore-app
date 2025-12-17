@@ -1,5 +1,5 @@
 import { Book } from '@/types/types';
-
+/* eslint-disable */
 const books: Book[] = [
   {
     id: '1',
