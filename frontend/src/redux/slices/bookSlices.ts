@@ -17,6 +17,7 @@ export const fetchBook = createAsyncThunk<Book[], string>(
       const res = await axios.get<Book[]>(url);
       return sortBooks(res.data, 'по популярності');
     } catch (error) {
+      console.error('Не вдалося отримати книги:', error);
       throw error;
     }
   },

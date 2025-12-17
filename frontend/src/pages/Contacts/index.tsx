@@ -1,5 +1,2 @@
-function Contacts() {
-  return <div className="h-screen"></div>;
-}
-
+const Contacts = () => <div className="h-screen"></div>;
 export default Contacts;
