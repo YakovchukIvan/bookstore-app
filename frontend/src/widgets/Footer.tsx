@@ -22,6 +22,6 @@ const Footer = () => (
       <p>© 2024 Book Store App. Всі права захищено</p>
     </div>
   </footer>
-)
+);
 
 export default Footer;
