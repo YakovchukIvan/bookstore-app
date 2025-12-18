@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-const Menu = () => {
+const Menu = () => (
   <header>
     <nav>
       <NavLink to="." end>
@@ -10,7 +10,7 @@ const Menu = () => {
       <NavLink to="/about">Про проект</NavLink>
       <NavLink to="/contacts">Контакти</NavLink>
     </nav>
-  </header>;
-};
+  </header>
+)
 
 export default Menu;
