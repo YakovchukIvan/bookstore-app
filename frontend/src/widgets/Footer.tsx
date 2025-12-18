@@ -1,7 +1,7 @@
 import styles from './Footer.module.scss';
 import { Link } from 'react-router-dom';
 
-const Footer = () => {
+const Footer = () => (
   <footer className={styles.footer}>
     <div className={styles.caption}>
       <ul>
@@ -21,7 +21,7 @@ const Footer = () => {
     <div className={styles.protect}>
       <p>© 2024 Book Store App. Всі права захищено</p>
     </div>
-  </footer>;
-};
+  </footer>
+)
 
 export default Footer;
