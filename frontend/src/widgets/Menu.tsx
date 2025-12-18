@@ -11,6 +11,6 @@ const Menu = () => (
       <NavLink to="/contacts">Контакти</NavLink>
     </nav>
   </header>
-)
+);
 
 export default Menu;
